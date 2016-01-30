@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  iController
+
+  Created by 吴双 on 16/1/30.
+  Copyright © 2016年 unique. All rights reserved.
+*/
+
+"TabBar.Main.Title" = "Control Center";
+"TabBar.Device.Title" = "Device List";
+"TabBar.Battery.Title" = "Battery Info";
+"TabBar.Profile.Title" = "Settings";

@@ -10,6 +10,12 @@
 		D4BF93421C5CB741005D06AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF93411C5CB741005D06AA /* main.m */; };
 		D4BF934D1C5CB741005D06AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4BF934C1C5CB741005D06AA /* Assets.xcassets */; };
 		D4BF93791C5CB99D005D06AA /* ICAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF935B1C5CB99D005D06AA /* ICAppDelegate.m */; };
+		D4BF937F1C5CBD0C005D06AA /* ICTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF937E1C5CBD0C005D06AA /* ICTabBarViewController.m */; };
+		D4BF93821C5CBD32005D06AA /* ICMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF93811C5CBD32005D06AA /* ICMainViewController.m */; };
+		D4BF93851C5CBE9A005D06AA /* ICDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF93841C5CBE9A005D06AA /* ICDeviceViewController.m */; };
+		D4BF93881C5CBF13005D06AA /* ICBatteryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF93871C5CBF13005D06AA /* ICBatteryViewController.m */; };
+		D4BF938B1C5CBF91005D06AA /* ICProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF938A1C5CBF91005D06AA /* ICProfileViewController.m */; };
+		D4BF938E1C5CC2B1005D06AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4BF93901C5CC2B1005D06AA /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,17 @@
 		D4BF93511C5CB741005D06AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4BF935A1C5CB99D005D06AA /* ICAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICAppDelegate.h; sourceTree = "<group>"; };
 		D4BF935B1C5CB99D005D06AA /* ICAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICAppDelegate.m; sourceTree = "<group>"; };
+		D4BF937D1C5CBD0C005D06AA /* ICTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICTabBarViewController.h; sourceTree = "<group>"; };
+		D4BF937E1C5CBD0C005D06AA /* ICTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICTabBarViewController.m; sourceTree = "<group>"; };
+		D4BF93801C5CBD32005D06AA /* ICMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMainViewController.h; sourceTree = "<group>"; };
+		D4BF93811C5CBD32005D06AA /* ICMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMainViewController.m; sourceTree = "<group>"; };
+		D4BF93831C5CBE9A005D06AA /* ICDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDeviceViewController.h; sourceTree = "<group>"; };
+		D4BF93841C5CBE9A005D06AA /* ICDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDeviceViewController.m; sourceTree = "<group>"; };
+		D4BF93861C5CBF13005D06AA /* ICBatteryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICBatteryViewController.h; sourceTree = "<group>"; };
+		D4BF93871C5CBF13005D06AA /* ICBatteryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICBatteryViewController.m; sourceTree = "<group>"; };
+		D4BF93891C5CBF91005D06AA /* ICProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICProfileViewController.h; sourceTree = "<group>"; };
+		D4BF938A1C5CBF91005D06AA /* ICProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICProfileViewController.m; sourceTree = "<group>"; };
+		D4BF93911C5CC2B9005D06AA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +80,7 @@
 				D4BF934C1C5CB741005D06AA /* Assets.xcassets */,
 				D4BF93511C5CB741005D06AA /* Info.plist */,
 				D4BF93411C5CB741005D06AA /* main.m */,
+				D4BF93901C5CC2B1005D06AA /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -143,6 +161,8 @@
 		D4BF93611C5CB99D005D06AA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D4BF93861C5CBF13005D06AA /* ICBatteryViewController.h */,
+				D4BF93871C5CBF13005D06AA /* ICBatteryViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -182,6 +202,8 @@
 		D4BF93661C5CB99D005D06AA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D4BF93831C5CBE9A005D06AA /* ICDeviceViewController.h */,
+				D4BF93841C5CBE9A005D06AA /* ICDeviceViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -221,6 +243,8 @@
 		D4BF936B1C5CB99D005D06AA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D4BF93801C5CBD32005D06AA /* ICMainViewController.h */,
+				D4BF93811C5CBD32005D06AA /* ICMainViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -260,6 +284,8 @@
 		D4BF93701C5CB99D005D06AA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D4BF93891C5CBF91005D06AA /* ICProfileViewController.h */,
+				D4BF938A1C5CBF91005D06AA /* ICProfileViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -299,6 +325,8 @@
 		D4BF93751C5CB99D005D06AA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D4BF937D1C5CBD0C005D06AA /* ICTabBarViewController.h */,
+				D4BF937E1C5CBD0C005D06AA /* ICTabBarViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -364,8 +392,8 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = D4BF93341C5CB741005D06AA;
 			productRefGroup = D4BF933E1C5CB741005D06AA /* Products */;
@@ -383,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4BF934D1C5CB741005D06AA /* Assets.xcassets in Resources */,
+				D4BF938E1C5CC2B1005D06AA /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,12 +422,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4BF93881C5CBF13005D06AA /* ICBatteryViewController.m in Sources */,
 				D4BF93421C5CB741005D06AA /* main.m in Sources */,
+				D4BF93821C5CBD32005D06AA /* ICMainViewController.m in Sources */,
+				D4BF93851C5CBE9A005D06AA /* ICDeviceViewController.m in Sources */,
+				D4BF938B1C5CBF91005D06AA /* ICProfileViewController.m in Sources */,
+				D4BF937F1C5CBD0C005D06AA /* ICTabBarViewController.m in Sources */,
 				D4BF93791C5CB99D005D06AA /* ICAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D4BF93901C5CC2B1005D06AA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4BF93911C5CC2B9005D06AA /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D4BF93521C5CB741005D06AA /* Debug */ = {
@@ -524,6 +569,7 @@
 				D4BF93561C5CB741005D06AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 //
 
 #import "ICAppDelegate.h"
+#import "ICTabBarViewController.h"
 
 @interface ICAppDelegate ()
 
@@ -17,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	[self.window makeKeyAndVisible];
+	[[NSBundle mainBundle] localizedStringForKey:@"" value:@"" table:nil];
 	return YES;
 }
 
@@ -24,7 +26,7 @@
 	if (!_window) {
 		_window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 		_window.backgroundColor = [UIColor whiteColor];
-		_window.rootViewController = [UIViewController new];
+		_window.rootViewController = [ICTabBarViewController sharedTabBarController];
 	}
 	return _window;
 }
