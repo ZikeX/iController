@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85DAE448DE85FA823BE32105 /* libPods-iController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7C5C558FD000A489DEFD19 /* libPods-iController.a */; };
 		D42E3F5F1C5E202E00DBA224 /* ICProfileTimeoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D42E3F5E1C5E202E00DBA224 /* ICProfileTimeoutCell.m */; };
+		D42E3F641C5E28BF00DBA224 /* ICNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D42E3F631C5E28BF00DBA224 /* ICNavigationController.m */; };
 		D4B28E7A1C5DD89A00259F89 /* ICProfileAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28E791C5DD89A00259F89 /* ICProfileAddressCell.m */; };
 		D4B28E7E1C5DD96A00259F89 /* ICTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28E7D1C5DD96A00259F89 /* ICTableViewCell.m */; };
 		D4B28E941C5DDDF600259F89 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28E821C5DDDF600259F89 /* UIBarButtonItem+Extension.m */; };
@@ -38,8 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		225900FC28075EC794090DAB /* Pods-iController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iController.release.xcconfig"; path = "Pods/Target Support Files/Pods-iController/Pods-iController.release.xcconfig"; sourceTree = "<group>"; };
+		8A7C5C558FD000A489DEFD19 /* libPods-iController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C999C7AA71CD9377E79BABB8 /* Pods-iController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iController/Pods-iController.debug.xcconfig"; sourceTree = "<group>"; };
 		D42E3F5D1C5E202E00DBA224 /* ICProfileTimeoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICProfileTimeoutCell.h; sourceTree = "<group>"; };
 		D42E3F5E1C5E202E00DBA224 /* ICProfileTimeoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICProfileTimeoutCell.m; sourceTree = "<group>"; };
+		D42E3F621C5E28BF00DBA224 /* ICNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICNavigationController.h; sourceTree = "<group>"; };
+		D42E3F631C5E28BF00DBA224 /* ICNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICNavigationController.m; sourceTree = "<group>"; };
 		D4B28E781C5DD89A00259F89 /* ICProfileAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICProfileAddressCell.h; sourceTree = "<group>"; };
 		D4B28E791C5DD89A00259F89 /* ICProfileAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICProfileAddressCell.m; sourceTree = "<group>"; };
 		D4B28E7C1C5DD96A00259F89 /* ICTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICTableViewCell.h; sourceTree = "<group>"; };
@@ -101,12 +108,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85DAE448DE85FA823BE32105 /* libPods-iController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00E8B9C492786B5907F3C580 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C999C7AA71CD9377E79BABB8 /* Pods-iController.debug.xcconfig */,
+				225900FC28075EC794090DAB /* Pods-iController.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D42E3F601C5E28AD00DBA224 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D42E3F611C5E28AD00DBA224 /* Navigation */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D42E3F611C5E28AD00DBA224 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D42E3F621C5E28BF00DBA224 /* ICNavigationController.h */,
+				D42E3F631C5E28BF00DBA224 /* ICNavigationController.m */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		D4B28E7B1C5DD96000259F89 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +244,8 @@
 			children = (
 				D4BF933F1C5CB741005D06AA /* iController */,
 				D4BF933E1C5CB741005D06AA /* Products */,
+				00E8B9C492786B5907F3C580 /* Pods */,
+				D5521F4B6D648221E3B5DE73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -260,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				D4BF93591C5CB99D005D06AA /* Application */,
+				D42E3F601C5E28AD00DBA224 /* Controller */,
 				D4BF935C1C5CB99D005D06AA /* Extension */,
 				D4BF935D1C5CB99D005D06AA /* Library */,
 				D4BF935E1C5CB99D005D06AA /* Manager */,
@@ -521,6 +558,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D5521F4B6D648221E3B5DE73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A7C5C558FD000A489DEFD19 /* libPods-iController.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -528,9 +573,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4BF93541C5CB741005D06AA /* Build configuration list for PBXNativeTarget "iController" */;
 			buildPhases = (
+				E055ED682D512C238C73463E /* Check Pods Manifest.lock */,
 				D4BF93391C5CB741005D06AA /* Sources */,
 				D4BF933A1C5CB741005D06AA /* Frameworks */,
 				D4BF933B1C5CB741005D06AA /* Resources */,
+				31B86FED39E0BB7529CA81D9 /* Embed Pods Frameworks */,
+				C63F2DED7023AFB052A0E0FF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -588,6 +636,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		31B86FED39E0BB7529CA81D9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iController/Pods-iController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C63F2DED7023AFB052A0E0FF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iController/Pods-iController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E055ED682D512C238C73463E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D4BF93391C5CB741005D06AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -617,6 +713,7 @@
 				D42E3F5F1C5E202E00DBA224 /* ICProfileTimeoutCell.m in Sources */,
 				D4B28EB51C5E0E8E00259F89 /* MUBottomPopGroupPickerView.m in Sources */,
 				D4BF93791C5CB99D005D06AA /* ICAppDelegate.m in Sources */,
+				D42E3F641C5E28BF00DBA224 /* ICNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,6 +813,7 @@
 		};
 		D4BF93551C5CB741005D06AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C999C7AA71CD9377E79BABB8 /* Pods-iController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -731,6 +829,7 @@
 		};
 		D4BF93561C5CB741005D06AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 225900FC28075EC794090DAB /* Pods-iController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";

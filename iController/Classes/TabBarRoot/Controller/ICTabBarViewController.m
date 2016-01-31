@@ -8,6 +8,7 @@
 //
 
 #import "ICTabBarViewController.h"
+#import "ICNavigationController.h"
 
 @interface ICTabBarViewController ()
 
@@ -30,7 +31,7 @@
 		NSArray *viewControllers = @[self.mainViewController, self.deviceViewController, self.batteryViewController, self.profileViewController];
 		NSMutableArray *navigationControllers = [NSMutableArray array];
 		for (UIViewController *viewController in viewControllers) {
-			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+			ICNavigationController *navigationController = [[ICNavigationController alloc] initWithRootViewController:viewController];
 			[navigationControllers addObject:navigationController];
 		}
 		self.viewControllers = [navigationControllers copy];
@@ -40,6 +41,9 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	[self.tabBar setTintColor:[UIColor colorWithRed:0.643 green:0.459 blue:0.353 alpha:1.000]];
+	[self.tabBar setBackgroundImage:[UIImage imageNamed:@"tabbar_bg"]];
+	[self.tabBar setShadowImage:[UIImage imageNamed:@"tabbar_shadow"]];
 }
 
 - (ICMainViewController *)mainViewController {
