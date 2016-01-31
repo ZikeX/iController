@@ -6,8 +6,6 @@
 //  Copyright © 2016年 unique. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 #import "ICMainViewController.h"
 #import "ICDeviceViewController.h"
 #import "ICBatteryViewController.h"

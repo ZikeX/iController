@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  iController
+//
+//  Created by 吴双 on 16/1/31.
+//  Copyright © 2016年 unique. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "UIKit+Extension.h"
+#import "ICUserDefaults.h"
+#import "ICAppDelegate.h"
+
+#import "Const.h"
+
+#endif /* PrefixHeader_pch */

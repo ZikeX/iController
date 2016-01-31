@@ -7,7 +7,6 @@
 //
 
 #import "ICAppDelegate.h"
-#import "ICTabBarViewController.h"
 
 @interface ICAppDelegate ()
 
@@ -15,10 +14,13 @@
 
 @implementation ICAppDelegate
 
++ (instancetype)sharedDelegate {
+	return (ICAppDelegate *)[UIApplication sharedApplication].delegate;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	[self.window makeKeyAndVisible];
-	[[NSBundle mainBundle] localizedStringForKey:@"" value:@"" table:nil];
+	[application registerForRemoteNotifications];
 	return YES;
 }
 
@@ -26,9 +28,13 @@
 	if (!_window) {
 		_window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 		_window.backgroundColor = [UIColor whiteColor];
-		_window.rootViewController = [ICTabBarViewController sharedTabBarController];
+		_window.rootViewController = self.tabBarViewController;
 	}
 	return _window;
+}
+
+- (ICTabBarViewController *)tabBarViewController {
+	return [ICTabBarViewController sharedTabBarController];
 }
 
 @end

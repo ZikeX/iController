@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ICProfileAddressCell.h"
+#import "ICProfilePortCell.h"
+#import "ICProfileTimeoutCell.h"
+
 @interface ICProfileViewController : UITableViewController
+
+@property (nonatomic, strong, readonly) ICProfileAddressCell	*addressCell;
+@property (nonatomic, strong, readonly) ICProfilePortCell		*portCell;
+@property (nonatomic, strong, readonly) ICProfileTimeoutCell	*timeoutCell;
 
 + (instancetype)sharedProfileViewController;
 
