@@ -29,8 +29,8 @@
 		self.title = NSLocalizedString(@"TabBar.Battery.Title", nil);
 		self.navigationItem.title = self.title;
 		self.tabBarItem.title = self.title;
-		self.tabBarItem.image = [UIImage imageNamed:@"tabbar_power"];
-		self.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_power_selected"];
+		self.tabBarItem.image = [[UIImage imageNamed:@"tabbar_battery_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+		self.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbar_battery_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 	}
 	return self;
 }

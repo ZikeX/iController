@@ -17,8 +17,23 @@
 	self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"port"];
 	if (self) {
 		self.textLabel.text = @"服务器端口";
+		self.textLabel.textColor = Const_Color_Title;
+		self.detailTextLabel.textColor = Const_Color_Subtitle;
 	}
 	return self;
+}
+
+- (void)layoutSubviews {
+	[super layoutSubviews];
+	self.textLabel.midX += 10;
+	self.detailTextLabel.midX -= 10;
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+	[super setSelected:selected animated:animated];
+	if (selected) {
+		
+	}
 }
 
 - (void)setPort:(NSUInteger)port {

@@ -16,8 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	[self.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bg"] forBarMetrics:UIBarMetricsDefault];
-	[self.navigationBar setShadowImage:[UIImage imageNamed:@"nav_shadow"]];
+	[self.navigationBar setBackgroundImage:[UIImage imageNamed:@"titlebar_bg"] forBarMetrics:UIBarMetricsDefault];
+	[self.navigationBar setShadowImage:[UIImage imageNamed:@"titlebar_bg_shadow"]];
 }
 
 

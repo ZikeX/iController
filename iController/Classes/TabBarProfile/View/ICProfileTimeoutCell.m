@@ -14,9 +14,17 @@
 	self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"timeout"];
 	if (self) {
 		self.textLabel.text = @"服务器超时";
+		self.textLabel.textColor = Const_Color_Title;
 		self.detailTextLabel.text = @" 秒";
+		self.detailTextLabel.textColor = Const_Color_Subtitle;
 	}
 	return self;
+}
+
+- (void)layoutSubviews {
+	[super layoutSubviews];
+	self.textLabel.midX += 10;
+	self.detailTextLabel.midX -= 10;
 }
 
 - (void)setTimeout:(NSUInteger)timeout {

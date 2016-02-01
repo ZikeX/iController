@@ -8,6 +8,7 @@
 
 #import "ICProfileViewController.h"
 #import "MUBottomPopNumberPickerView.h"
+#import "ICGroupTableViewTools.h"
 
 #define IP_MaxValue @[@(255), @(255), @(255), @(255)]
 
@@ -37,10 +38,16 @@
 		self.title = NSLocalizedString(@"TabBar.Profile.Title", nil);
 		self.navigationItem.title = self.title;
 		self.tabBarItem.title = self.title;
-		self.tabBarItem.image = [UIImage imageNamed:@"tabbar_profile"];
-		self.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_profile_selected"];
+		self.tabBarItem.image = [[UIImage imageNamed:@"tabbar_profile_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+		self.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbar_profile_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 	}
 	return self;
+}
+
+- (void)viewDidLoad {
+	[super viewDidLoad];
+	self.tableView.backgroundColor = Const_Color_Background;
+	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 #pragma mark - Table view data source
@@ -71,6 +78,20 @@
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseIdentifier"];
 	}
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	if (section == 0) {
+		return @"服务器设置";
+	}
+	return nil;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+	if (section == 0) {
+		return @"重启后生效";
+	}
+	return nil;
 }
 
 #pragma mark - Table view delegate
@@ -156,6 +177,12 @@
 	if (!_addressCell) {
 		_addressCell = [ICProfileAddressCell new];
 		_addressCell.address = ICUserDefaults.address;
+		_addressCell.backgroundColor = [UIColor clearColor];
+		NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+		UIImage *backgroundImage = [ICGroupTableViewTools tableView:self.tableView deselectRowBackgroundImageForIndexPath:indexPath];
+		UIImage *selectedImage = [ICGroupTableViewTools tableView:self.tableView selectRowBackgroundImageForIndexPath:indexPath];
+		_addressCell.backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
+		_addressCell.selectedBackgroundView = [[UIImageView alloc] initWithImage:selectedImage];
 	}
 	return _addressCell;
 }
@@ -163,7 +190,12 @@
 - (ICProfilePortCell *)portCell {
 	if (!_portCell) {
 		_portCell = [ICProfilePortCell new];
-		_portCell.port = ICUserDefaults.port;
+		_portCell.port = ICUserDefaults.port;NSIndexPath *indexPath = [NSIndexPath indexPathForRow:1 inSection:0];
+		_portCell.backgroundColor = [UIColor clearColor];
+		UIImage *backgroundImage = [ICGroupTableViewTools tableView:self.tableView deselectRowBackgroundImageForIndexPath:indexPath];
+		UIImage *selectedImage = [ICGroupTableViewTools tableView:self.tableView selectRowBackgroundImageForIndexPath:indexPath];
+		_portCell.backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
+		_portCell.selectedBackgroundView = [[UIImageView alloc] initWithImage:selectedImage];
 	}
 	return _portCell;
 }
@@ -172,6 +204,12 @@
 	if (!_timeoutCell) {
 		_timeoutCell = [ICProfileTimeoutCell new];
 		_timeoutCell.timeout = ICUserDefaults.timeout;
+		_timeoutCell.backgroundColor = [UIColor clearColor];
+		NSIndexPath *indexPath = [NSIndexPath indexPathForRow:2 inSection:0];
+		UIImage *backgroundImage = [ICGroupTableViewTools tableView:self.tableView deselectRowBackgroundImageForIndexPath:indexPath];
+		UIImage *selectedImage = [ICGroupTableViewTools tableView:self.tableView selectRowBackgroundImageForIndexPath:indexPath];
+		_timeoutCell.backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
+		_timeoutCell.selectedBackgroundView = [[UIImageView alloc] initWithImage:selectedImage];
 	}
 	return _timeoutCell;
 }

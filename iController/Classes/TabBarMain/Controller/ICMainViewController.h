@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ICMainViewController : UITableViewController
+@interface ICMainViewController : UIViewController
 
 + (instancetype)sharedMainViewController;
 

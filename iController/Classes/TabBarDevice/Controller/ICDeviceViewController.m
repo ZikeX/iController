@@ -29,10 +29,18 @@
 		self.title = NSLocalizedString(@"TabBar.Device.Title", nil);
 		self.navigationItem.title = self.title;
 		self.tabBarItem.title = self.title;
-		self.tabBarItem.image = [UIImage imageNamed:@"tabbar_list"];
-		self.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_list_selected"];
+		self.tabBarItem.image = [[UIImage imageNamed:@"tabbar_device_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+		self.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbar_device_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 	}
 	return self;
+}
+
+- (void)viewDidLoad {
+	[super viewDidLoad];
+	self.view.backgroundColor = [UIColor whiteColor];
+	self.tableView.mj_header = [MJRefreshStateHeader headerWithRefreshingBlock:^{
+		[self.tableView.mj_header endRefreshing];
+	}];
 }
 
 #pragma mark - Table view data source

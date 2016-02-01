@@ -18,8 +18,16 @@
 	self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"address"];
 	if (self) {
 		self.textLabel.text = @"服务器地址";
+		self.textLabel.textColor = Const_Color_Title;
+		self.detailTextLabel.textColor = Const_Color_Subtitle;
 	}
 	return self;
+}
+
+- (void)layoutSubviews {
+	[super layoutSubviews];
+	self.textLabel.midX += 10;
+	self.detailTextLabel.midX -= 10;
 }
 
 - (void)setAddress:(NSString *)address {

@@ -41,9 +41,11 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	[self.tabBar setTintColor:[UIColor colorWithRed:0.643 green:0.459 blue:0.353 alpha:1.000]];
+//	[self.tabBar setTintColor:[UIColor colorWithRed:0.643 green:0.459 blue:0.353 alpha:1.000]];
+	[self.tabBar setTintColor:[UIColor whiteColor]];
 	[self.tabBar setBackgroundImage:[UIImage imageNamed:@"tabbar_bg"]];
-	[self.tabBar setShadowImage:[UIImage imageNamed:@"tabbar_shadow"]];
+	[self.tabBar setShadowImage:[UIImage imageNamed:@"tabbar_bg_shadow"]];
+	self.tabBar.selectionIndicatorImage = [UIImage imageNamed:@"tabbar_bg_down"];
 }
 
 - (ICMainViewController *)mainViewController {

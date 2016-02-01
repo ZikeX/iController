@@ -10,6 +10,7 @@
 		85DAE448DE85FA823BE32105 /* libPods-iController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7C5C558FD000A489DEFD19 /* libPods-iController.a */; };
 		D42E3F5F1C5E202E00DBA224 /* ICProfileTimeoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D42E3F5E1C5E202E00DBA224 /* ICProfileTimeoutCell.m */; };
 		D42E3F641C5E28BF00DBA224 /* ICNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D42E3F631C5E28BF00DBA224 /* ICNavigationController.m */; };
+		D42E3F671C5E600B00DBA224 /* ICGroupTableViewTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D42E3F661C5E600B00DBA224 /* ICGroupTableViewTools.m */; };
 		D4B28E7A1C5DD89A00259F89 /* ICProfileAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28E791C5DD89A00259F89 /* ICProfileAddressCell.m */; };
 		D4B28E7E1C5DD96A00259F89 /* ICTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28E7D1C5DD96A00259F89 /* ICTableViewCell.m */; };
 		D4B28E941C5DDDF600259F89 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28E821C5DDDF600259F89 /* UIBarButtonItem+Extension.m */; };
@@ -47,6 +48,8 @@
 		D42E3F5E1C5E202E00DBA224 /* ICProfileTimeoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICProfileTimeoutCell.m; sourceTree = "<group>"; };
 		D42E3F621C5E28BF00DBA224 /* ICNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICNavigationController.h; sourceTree = "<group>"; };
 		D42E3F631C5E28BF00DBA224 /* ICNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICNavigationController.m; sourceTree = "<group>"; };
+		D42E3F651C5E600B00DBA224 /* ICGroupTableViewTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGroupTableViewTools.h; sourceTree = "<group>"; };
+		D42E3F661C5E600B00DBA224 /* ICGroupTableViewTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGroupTableViewTools.m; sourceTree = "<group>"; };
 		D4B28E781C5DD89A00259F89 /* ICProfileAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICProfileAddressCell.h; sourceTree = "<group>"; };
 		D4B28E791C5DD89A00259F89 /* ICProfileAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICProfileAddressCell.m; sourceTree = "<group>"; };
 		D4B28E7C1C5DD96A00259F89 /* ICTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICTableViewCell.h; sourceTree = "<group>"; };
@@ -343,6 +346,8 @@
 			children = (
 				D4B28EBA1C5E0EBA00259F89 /* ICUserDefaults.h */,
 				D4B28EBB1C5E0EBA00259F89 /* ICUserDefaults.m */,
+				D42E3F651C5E600B00DBA224 /* ICGroupTableViewTools.h */,
+				D42E3F661C5E600B00DBA224 /* ICGroupTableViewTools.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -706,6 +711,7 @@
 				D4B28EBC1C5E0EBA00259F89 /* ICUserDefaults.m in Sources */,
 				D4B28E971C5DDDF600259F89 /* UIImage+Extension.m in Sources */,
 				D4B28E951C5DDDF600259F89 /* UIButton+Extension.m in Sources */,
+				D42E3F671C5E600B00DBA224 /* ICGroupTableViewTools.m in Sources */,
 				D4BF937F1C5CBD0C005D06AA /* ICTabBarViewController.m in Sources */,
 				D4B28EB61C5E0E8E00259F89 /* MUBottomPopNumberPickerView.m in Sources */,
 				D4B28EB71C5E0E8E00259F89 /* MUBottomPopPickerView.m in Sources */,
