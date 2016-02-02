@@ -7,8 +7,10 @@
 //
 
 #import "ICProfileViewController.h"
-#import "MUBottomPopNumberPickerView.h"
 #import "ICGroupTableViewTools.h"
+#import "ICServiceViewController.h"
+#import "ICMessageViewController.h"
+#import "ICTableViewCell.h"
 
 #define IP_MaxValue @[@(255), @(255), @(255), @(255)]
 
@@ -50,168 +52,44 @@
 	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
-#pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+	return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+	return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	if (indexPath.section == 0) {
-		switch (indexPath.row) {
-			case 0:
-				return self.addressCell;
-			case 1:
-				return self.portCell;
-			case 2:
-				return self.timeoutCell;
-			default:
-				break;
-		}
-	}
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier"];
+	static NSString *identifier = @"identifier";
+	ICTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
 	if (!cell) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseIdentifier"];
+		cell = [[ICTableViewCell alloc] initWithReuseIdentifier:identifier];
 	}
-    return cell;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	if (section == 0) {
-		return @"服务器设置";
-	}
-	return nil;
+	[cell setIndexPath:indexPath withTableView:tableView];
+	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	NSArray *titles = @[@"服务器设置", @"消息设置"];
+	cell.textLabel.text = titles[indexPath.section];
+	return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
 	if (section == 0) {
-		return @"重启后生效";
+		return @"修改服务器地址, 端口号, 最长等待时间";
+	} else if (section == 1) {
+		return @"笔记本低电量消息, 有新设备连接消息";
 	}
 	return nil;
 }
 
-#pragma mark - Table view delegate
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 	if (indexPath.section == 0) {
-		if (indexPath.row == 0) {
-			[self responseForAddress];
-		} else if (indexPath.row == 1) {
-			[self responseForPort];
-		} else if (indexPath.row == 2) {
-			[self responseForTimeout];
-		}
+		[self.navigationController pushViewController:[ICServiceViewController new] animated:YES];
+	} else if (indexPath.section == 1) {
+		[self.navigationController pushViewController:[ICMessageViewController new] animated:YES];
 	}
-}
-
-#pragma mark - Table view cell response
-
-- (void)responseForAddress {
-	NSArray<NSString *> *ip = [ICUserDefaults.address componentsSeparatedByString:@"."];
-	if (ip.count != 4) {
-		ip = nil;
-	}
-	NSMutableArray<NSNumber *> *selectedIndex = [NSMutableArray array];
-	for (int i = 0; i < ip.count; i++) {
-		[selectedIndex addObject:@(ip[i].integerValue)];
-	}
-	[MUBottomPopNumberPickerView showWithMaxValues:IP_MaxValue
-									 selectedIndex:selectedIndex
-									animatedOption:MUBottomPopViewAnimatedOptionRebound
-									  certainBlock:^(BOOL ok,
-													 NSArray<NSNumber *> *maxValues,
-													 NSArray<NSNumber *> *selectedIndexes) {
-										  if (ok) {
-											  ICUserDefaults.address = [NSString stringWithFormat:@"%@.%@.%@.%@",
-																		selectedIndexes[0],
-																		selectedIndexes[1],
-																		selectedIndexes[2],
-																		selectedIndexes[3]];
-											  self.addressCell.address = ICUserDefaults.address;
-										  }
-	}];
-}
-
-- (void)responseForPort {
-	NSUInteger port = ICUserDefaults.port;
-	if (port == 0) {
-		port = 19730;
-	}
-	[MUBottomPopNumberPickerView showWithMaxValues:@[@(65535)]
-									 selectedIndex:@[@(port)]
-									animatedOption:MUBottomPopViewAnimatedOptionRebound
-									  certainBlock:^(BOOL ok,
-													 NSArray<NSNumber *> *maxValues,
-													 NSArray<NSNumber *> *selectedIndexes) {
-										  if (ok) {
-											  ICUserDefaults.port = selectedIndexes.firstObject.intValue;
-											  self.portCell.port = ICUserDefaults.port;
-										  }
-	}];
-}
-
-- (void)responseForTimeout {
-	NSUInteger timeout = ICUserDefaults.timeout;
-	if (timeout == 0) {
-		timeout = 3;
-	}
-	[MUBottomPopNumberPickerView showWithMaxValues:@[@(60)]
-									 selectedIndex:@[@(timeout)]
-									animatedOption:MUBottomPopViewAnimatedOptionRebound
-									  certainBlock:^(BOOL ok,
-													 NSArray<NSNumber *> *maxValues,
-													 NSArray<NSNumber *> *selectedIndexes) {
-										  if (ok) {
-											  ICUserDefaults.timeout = selectedIndexes.firstObject.intValue;
-											  self.timeoutCell.timeout = ICUserDefaults.timeout;
-										  }
-	}];
-}
-
-- (ICProfileAddressCell *)addressCell {
-	if (!_addressCell) {
-		_addressCell = [ICProfileAddressCell new];
-		_addressCell.address = ICUserDefaults.address;
-		_addressCell.backgroundColor = [UIColor clearColor];
-		NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-		UIImage *backgroundImage = [ICGroupTableViewTools tableView:self.tableView deselectRowBackgroundImageForIndexPath:indexPath];
-		UIImage *selectedImage = [ICGroupTableViewTools tableView:self.tableView selectRowBackgroundImageForIndexPath:indexPath];
-		_addressCell.backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
-		_addressCell.selectedBackgroundView = [[UIImageView alloc] initWithImage:selectedImage];
-	}
-	return _addressCell;
-}
-
-- (ICProfilePortCell *)portCell {
-	if (!_portCell) {
-		_portCell = [ICProfilePortCell new];
-		_portCell.port = ICUserDefaults.port;NSIndexPath *indexPath = [NSIndexPath indexPathForRow:1 inSection:0];
-		_portCell.backgroundColor = [UIColor clearColor];
-		UIImage *backgroundImage = [ICGroupTableViewTools tableView:self.tableView deselectRowBackgroundImageForIndexPath:indexPath];
-		UIImage *selectedImage = [ICGroupTableViewTools tableView:self.tableView selectRowBackgroundImageForIndexPath:indexPath];
-		_portCell.backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
-		_portCell.selectedBackgroundView = [[UIImageView alloc] initWithImage:selectedImage];
-	}
-	return _portCell;
-}
-
-- (ICProfileTimeoutCell *)timeoutCell {
-	if (!_timeoutCell) {
-		_timeoutCell = [ICProfileTimeoutCell new];
-		_timeoutCell.timeout = ICUserDefaults.timeout;
-		_timeoutCell.backgroundColor = [UIColor clearColor];
-		NSIndexPath *indexPath = [NSIndexPath indexPathForRow:2 inSection:0];
-		UIImage *backgroundImage = [ICGroupTableViewTools tableView:self.tableView deselectRowBackgroundImageForIndexPath:indexPath];
-		UIImage *selectedImage = [ICGroupTableViewTools tableView:self.tableView selectRowBackgroundImageForIndexPath:indexPath];
-		_timeoutCell.backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
-		_timeoutCell.selectedBackgroundView = [[UIImageView alloc] initWithImage:selectedImage];
-	}
-	return _timeoutCell;
+	
 }
 
 @end

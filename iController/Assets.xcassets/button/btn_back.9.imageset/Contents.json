@@ -8,12 +8,12 @@
       "resizing" : {
         "mode" : "3-part-horizontal",
         "center" : {
-          "mode" : "tile",
-          "width" : 1
+          "mode" : "stretch",
+          "width" : 14
         },
         "cap-insets" : {
-          "right" : 20,
-          "left" : 47
+          "right" : 27,
+          "left" : 53
         }
       },
       "idiom" : "universal",

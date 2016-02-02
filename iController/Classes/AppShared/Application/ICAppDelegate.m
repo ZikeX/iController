@@ -9,6 +9,9 @@
 #import "ICAppDelegate.h"
 
 @interface ICAppDelegate ()
+{
+	UIWindow *_window;
+}
 
 @end
 

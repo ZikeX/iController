@@ -18,6 +18,7 @@
 	self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"address"];
 	if (self) {
 		self.textLabel.text = @"服务器地址";
+		self.backgroundColor = [UIColor clearColor];
 		self.textLabel.textColor = Const_Color_Title;
 		self.detailTextLabel.textColor = Const_Color_Subtitle;
 	}

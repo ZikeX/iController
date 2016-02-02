@@ -7,6 +7,15 @@
 //
 
 #import "ICTableViewCell.h"
+#import "ICGroupTableViewTools.h"
+
+@interface ICTableViewCell ()
+{
+	BOOL _showArrow;
+	ICGroupTableViewRowType _rowType;
+}
+
+@end
 
 @implementation ICTableViewCell
 
@@ -17,9 +26,77 @@
 - (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier {
 	self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
 	if (self) {
-		
+		_showArrow = NO;
+		self.backgroundColor = [UIColor clearColor];
 	}
 	return self;
+}
+
+- (void)layoutSubviews {
+	[super layoutSubviews];
+	self.textLabel.midX += 10;
+	self.detailTextLabel.midX -= 10;
+	switch (_rowType) {
+		case ICGroupTableViewRowTypeTop: {
+			self.textLabel.midY++;
+			break;
+		}
+		case ICGroupTableViewRowTypeButtom: {
+			self.textLabel.midY--;
+			break;
+		}
+		default: {
+			
+		}
+	}
+}
+
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+	[super setHighlighted:highlighted animated:animated];
+	if (highlighted) {
+			self.textLabel.textColor = [UIColor whiteColor];
+			self.detailTextLabel.textColor = [UIColor whiteColor];
+			if (_showArrow) {
+				UIImageView *imageView = (UIImageView *)self.accessoryView;
+				imageView.image = [UIImage imageNamed:@"arrow3_down"];
+			}
+		
+	} else {
+			self.textLabel.textColor = Const_Color_Title;
+			self.detailTextLabel.textColor = Const_Color_Subtitle;
+			if (_showArrow) {
+				UIImageView *imageView = (UIImageView *)self.accessoryView;
+				imageView.image = [UIImage imageNamed:@"arrow3"];
+			}
+	}
+}
+
+- (void)setAccessoryType:(UITableViewCellAccessoryType)accessoryType {
+	switch (accessoryType) {
+		case UITableViewCellAccessoryDisclosureIndicator: {
+			UIImage *image = nil;
+			_showArrow = YES;
+			if (self.isSelected) {
+				image = [UIImage imageNamed:@"arrow3_down"];
+			} else {
+				image = [UIImage imageNamed:@"arrow3"];
+			}
+			[self setAccessoryView:[[UIImageView alloc] initWithImage:image]];
+			break;
+		}
+		case UITableViewCellAccessoryNone:
+			if (self.accessoryType == UITableViewCellAccessoryDisclosureIndicator) {
+				self.accessoryView = nil;
+			}
+		default: {
+			_showArrow = NO;
+			[super setAccessoryType:accessoryType];
+		}
+	}
+}
+
+- (void)setIndexPath:(NSIndexPath *)indexPath withTableView:(UITableView *)tableView {
+	SetCellBackgroundView(self, tableView, indexPath);
 }
 
 @end

@@ -14,6 +14,7 @@
 	self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"timeout"];
 	if (self) {
 		self.textLabel.text = @"服务器超时";
+		self.backgroundColor = [UIColor clearColor];
 		self.textLabel.textColor = Const_Color_Title;
 		self.detailTextLabel.text = @" 秒";
 		self.detailTextLabel.textColor = Const_Color_Subtitle;

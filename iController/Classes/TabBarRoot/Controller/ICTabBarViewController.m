@@ -9,6 +9,7 @@
 
 #import "ICTabBarViewController.h"
 #import "ICNavigationController.h"
+#import "ICTabBar.h"
 
 @interface ICTabBarViewController ()
 
@@ -28,6 +29,7 @@
 - (instancetype)init {
 	self = [super init];
 	if (self) {
+		[self setValue:[ICTabBar new] forKey:@"tabBar"];
 		NSArray *viewControllers = @[self.mainViewController, self.deviceViewController, self.batteryViewController, self.profileViewController];
 		NSMutableArray *navigationControllers = [NSMutableArray array];
 		for (UIViewController *viewController in viewControllers) {
@@ -41,39 +43,22 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-//	[self.tabBar setTintColor:[UIColor colorWithRed:0.643 green:0.459 blue:0.353 alpha:1.000]];
-	[self.tabBar setTintColor:[UIColor whiteColor]];
-	[self.tabBar setBackgroundImage:[UIImage imageNamed:@"tabbar_bg"]];
-	[self.tabBar setShadowImage:[UIImage imageNamed:@"tabbar_bg_shadow"]];
-	self.tabBar.selectionIndicatorImage = [UIImage imageNamed:@"tabbar_bg_down"];
 }
 
 - (ICMainViewController *)mainViewController {
-	if (!_mainViewController) {
-		_mainViewController = [ICMainViewController sharedMainViewController];
-	}
-	return _mainViewController;
+	return [ICMainViewController sharedMainViewController];
 }
 
 - (ICDeviceViewController *)deviceViewController {
-	if (!_deviceViewController) {
-		_deviceViewController = [ICDeviceViewController sharedDeviceViewController];
-	}
-	return _deviceViewController;
+	return [ICDeviceViewController sharedDeviceViewController];
 }
 
 - (ICBatteryViewController *)batteryViewController {
-	if (!_batteryViewController) {
-		_batteryViewController = [ICBatteryViewController sharedBatteryViewController];
-	}
-	return _batteryViewController;
+	return [ICBatteryViewController sharedBatteryViewController];
 }
 
 - (ICProfileViewController *)profileViewController {
-	if (!_profileViewController) {
-		_profileViewController = [ICProfileViewController sharedProfileViewController];
-	}
-	return _profileViewController;
+	return [ICProfileViewController sharedProfileViewController];
 }
 
 @end

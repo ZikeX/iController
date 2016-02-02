@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		85DAE448DE85FA823BE32105 /* libPods-iController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7C5C558FD000A489DEFD19 /* libPods-iController.a */; };
-		D42E3F5F1C5E202E00DBA224 /* ICProfileTimeoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D42E3F5E1C5E202E00DBA224 /* ICProfileTimeoutCell.m */; };
 		D42E3F641C5E28BF00DBA224 /* ICNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D42E3F631C5E28BF00DBA224 /* ICNavigationController.m */; };
 		D42E3F671C5E600B00DBA224 /* ICGroupTableViewTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D42E3F661C5E600B00DBA224 /* ICGroupTableViewTools.m */; };
-		D4B28E7A1C5DD89A00259F89 /* ICProfileAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28E791C5DD89A00259F89 /* ICProfileAddressCell.m */; };
+		D47BCBFC1C60D8B100B4C057 /* ICServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D47BCBFB1C60D8B100B4C057 /* ICServiceViewController.m */; };
+		D47BCC021C60DA7400B4C057 /* ICProfileTimeoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D47BCBFF1C60DA7400B4C057 /* ICProfileTimeoutCell.m */; };
+		D47BCC031C60DA7400B4C057 /* ICProfileAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D47BCC001C60DA7400B4C057 /* ICProfileAddressCell.m */; };
+		D47BCC061C60DA9F00B4C057 /* ICPortCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = D47BCC051C60DA9F00B4C057 /* ICPortCalculator.m */; };
+		D47BCC081C60DB7500B4C057 /* ICProfilePortCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D47BCC071C60DB7500B4C057 /* ICProfilePortCell.m */; };
+		D484F90F1C60E87500837BD0 /* ICMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D484F90E1C60E87500837BD0 /* ICMessageViewController.m */; };
 		D4B28E7E1C5DD96A00259F89 /* ICTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28E7D1C5DD96A00259F89 /* ICTableViewCell.m */; };
 		D4B28E941C5DDDF600259F89 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28E821C5DDDF600259F89 /* UIBarButtonItem+Extension.m */; };
 		D4B28E951C5DDDF600259F89 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28E851C5DDDF600259F89 /* UIButton+Extension.m */; };
@@ -20,7 +24,6 @@
 		D4B28E981C5DDDF600259F89 /* UINavigationBar+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28E8F1C5DDDF600259F89 /* UINavigationBar+Extension.m */; };
 		D4B28E991C5DDDF600259F89 /* UINavigationBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D4B28E901C5DDDF600259F89 /* UINavigationBar.bundle */; };
 		D4B28E9A1C5DDDF600259F89 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28E931C5DDDF600259F89 /* UIView+Extension.m */; };
-		D4B28E9E1C5DE0A900259F89 /* ICProfilePortCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28E9D1C5DE0A900259F89 /* ICProfilePortCell.m */; };
 		D4B28EB31C5E0E8E00259F89 /* MUBottomPopCityPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28EA71C5E0E8E00259F89 /* MUBottomPopCityPickerView.m */; };
 		D4B28EB41C5E0E8E00259F89 /* MUBottomPopDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28EA91C5E0E8E00259F89 /* MUBottomPopDatePickerView.m */; };
 		D4B28EB51C5E0E8E00259F89 /* MUBottomPopGroupPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28EAB1C5E0E8E00259F89 /* MUBottomPopGroupPickerView.m */; };
@@ -38,20 +41,30 @@
 		D4BF93881C5CBF13005D06AA /* ICBatteryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF93871C5CBF13005D06AA /* ICBatteryViewController.m */; };
 		D4BF938B1C5CBF91005D06AA /* ICProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BF938A1C5CBF91005D06AA /* ICProfileViewController.m */; };
 		D4BF938E1C5CC2B1005D06AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4BF93901C5CC2B1005D06AA /* Localizable.strings */; };
+		D4CB2E3D1C6080E600311399 /* ICSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CB2E3C1C6080E600311399 /* ICSegmentedControl.m */; };
+		D4CB2E401C60836400311399 /* ICTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CB2E3F1C60836400311399 /* ICTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		225900FC28075EC794090DAB /* Pods-iController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iController.release.xcconfig"; path = "Pods/Target Support Files/Pods-iController/Pods-iController.release.xcconfig"; sourceTree = "<group>"; };
 		8A7C5C558FD000A489DEFD19 /* libPods-iController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C999C7AA71CD9377E79BABB8 /* Pods-iController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iController/Pods-iController.debug.xcconfig"; sourceTree = "<group>"; };
-		D42E3F5D1C5E202E00DBA224 /* ICProfileTimeoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICProfileTimeoutCell.h; sourceTree = "<group>"; };
-		D42E3F5E1C5E202E00DBA224 /* ICProfileTimeoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICProfileTimeoutCell.m; sourceTree = "<group>"; };
 		D42E3F621C5E28BF00DBA224 /* ICNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICNavigationController.h; sourceTree = "<group>"; };
 		D42E3F631C5E28BF00DBA224 /* ICNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICNavigationController.m; sourceTree = "<group>"; };
 		D42E3F651C5E600B00DBA224 /* ICGroupTableViewTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGroupTableViewTools.h; sourceTree = "<group>"; };
 		D42E3F661C5E600B00DBA224 /* ICGroupTableViewTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGroupTableViewTools.m; sourceTree = "<group>"; };
-		D4B28E781C5DD89A00259F89 /* ICProfileAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICProfileAddressCell.h; sourceTree = "<group>"; };
-		D4B28E791C5DD89A00259F89 /* ICProfileAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICProfileAddressCell.m; sourceTree = "<group>"; };
+		D47BCBFA1C60D8B100B4C057 /* ICServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICServiceViewController.h; sourceTree = "<group>"; };
+		D47BCBFB1C60D8B100B4C057 /* ICServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICServiceViewController.m; sourceTree = "<group>"; };
+		D47BCBFD1C60DA7400B4C057 /* ICProfilePortCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICProfilePortCell.h; sourceTree = "<group>"; };
+		D47BCBFE1C60DA7400B4C057 /* ICProfileTimeoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICProfileTimeoutCell.h; sourceTree = "<group>"; };
+		D47BCBFF1C60DA7400B4C057 /* ICProfileTimeoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICProfileTimeoutCell.m; sourceTree = "<group>"; };
+		D47BCC001C60DA7400B4C057 /* ICProfileAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICProfileAddressCell.m; sourceTree = "<group>"; };
+		D47BCC011C60DA7400B4C057 /* ICProfileAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICProfileAddressCell.h; sourceTree = "<group>"; };
+		D47BCC041C60DA9F00B4C057 /* ICPortCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICPortCalculator.h; sourceTree = "<group>"; };
+		D47BCC051C60DA9F00B4C057 /* ICPortCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICPortCalculator.m; sourceTree = "<group>"; };
+		D47BCC071C60DB7500B4C057 /* ICProfilePortCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICProfilePortCell.m; sourceTree = "<group>"; };
+		D484F90D1C60E87500837BD0 /* ICMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMessageViewController.h; sourceTree = "<group>"; };
+		D484F90E1C60E87500837BD0 /* ICMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMessageViewController.m; sourceTree = "<group>"; };
 		D4B28E7C1C5DD96A00259F89 /* ICTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICTableViewCell.h; sourceTree = "<group>"; };
 		D4B28E7D1C5DD96A00259F89 /* ICTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICTableViewCell.m; sourceTree = "<group>"; };
 		D4B28E811C5DDDF600259F89 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
@@ -69,8 +82,6 @@
 		D4B28E921C5DDDF600259F89 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		D4B28E931C5DDDF600259F89 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		D4B28E9B1C5DDE1300259F89 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		D4B28E9C1C5DE0A900259F89 /* ICProfilePortCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICProfilePortCell.h; sourceTree = "<group>"; };
-		D4B28E9D1C5DE0A900259F89 /* ICProfilePortCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICProfilePortCell.m; sourceTree = "<group>"; };
 		D4B28EA61C5E0E8E00259F89 /* MUBottomPopCityPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUBottomPopCityPickerView.h; sourceTree = "<group>"; };
 		D4B28EA71C5E0E8E00259F89 /* MUBottomPopCityPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUBottomPopCityPickerView.m; sourceTree = "<group>"; };
 		D4B28EA81C5E0E8E00259F89 /* MUBottomPopDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUBottomPopDatePickerView.h; sourceTree = "<group>"; };
@@ -104,6 +115,10 @@
 		D4BF93891C5CBF91005D06AA /* ICProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICProfileViewController.h; sourceTree = "<group>"; };
 		D4BF938A1C5CBF91005D06AA /* ICProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICProfileViewController.m; sourceTree = "<group>"; };
 		D4BF93911C5CC2B9005D06AA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D4CB2E3B1C6080E600311399 /* ICSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSegmentedControl.h; sourceTree = "<group>"; };
+		D4CB2E3C1C6080E600311399 /* ICSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSegmentedControl.m; sourceTree = "<group>"; };
+		D4CB2E3E1C60836400311399 /* ICTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICTabBar.h; sourceTree = "<group>"; };
+		D4CB2E3F1C60836400311399 /* ICTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,11 +159,103 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		D47BCBF51C60D87A00B4C057 /* SettingService */ = {
+			isa = PBXGroup;
+			children = (
+				D47BCBF61C60D87A00B4C057 /* Controller */,
+				D47BCBF71C60D87A00B4C057 /* Model */,
+				D47BCBF81C60D87A00B4C057 /* Tools */,
+				D47BCBF91C60D87A00B4C057 /* View */,
+			);
+			path = SettingService;
+			sourceTree = "<group>";
+		};
+		D47BCBF61C60D87A00B4C057 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D47BCBFA1C60D8B100B4C057 /* ICServiceViewController.h */,
+				D47BCBFB1C60D8B100B4C057 /* ICServiceViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D47BCBF71C60D87A00B4C057 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D47BCBF81C60D87A00B4C057 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				D47BCC041C60DA9F00B4C057 /* ICPortCalculator.h */,
+				D47BCC051C60DA9F00B4C057 /* ICPortCalculator.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		D47BCBF91C60D87A00B4C057 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D47BCBFD1C60DA7400B4C057 /* ICProfilePortCell.h */,
+				D47BCC071C60DB7500B4C057 /* ICProfilePortCell.m */,
+				D47BCBFE1C60DA7400B4C057 /* ICProfileTimeoutCell.h */,
+				D47BCBFF1C60DA7400B4C057 /* ICProfileTimeoutCell.m */,
+				D47BCC011C60DA7400B4C057 /* ICProfileAddressCell.h */,
+				D47BCC001C60DA7400B4C057 /* ICProfileAddressCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D47BCC091C60E85200B4C057 /* SettingMessage */ = {
+			isa = PBXGroup;
+			children = (
+				D47BCC0A1C60E85200B4C057 /* Controller */,
+				D47BCC0B1C60E85200B4C057 /* Model */,
+				D47BCC0C1C60E85200B4C057 /* Tools */,
+				D47BCC0D1C60E85200B4C057 /* View */,
+			);
+			path = SettingMessage;
+			sourceTree = "<group>";
+		};
+		D47BCC0A1C60E85200B4C057 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D484F90D1C60E87500837BD0 /* ICMessageViewController.h */,
+				D484F90E1C60E87500837BD0 /* ICMessageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D47BCC0B1C60E85200B4C057 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D47BCC0C1C60E85200B4C057 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		D47BCC0D1C60E85200B4C057 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D4B28E7B1C5DD96000259F89 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				D4B28E7C1C5DD96A00259F89 /* ICTableViewCell.h */,
 				D4B28E7D1C5DD96A00259F89 /* ICTableViewCell.m */,
+				D4CB2E3B1C6080E600311399 /* ICSegmentedControl.h */,
+				D4CB2E3C1C6080E600311399 /* ICSegmentedControl.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -291,6 +398,8 @@
 				D4BF93651C5CB99D005D06AA /* TabBarDevice */,
 				D4BF93601C5CB99D005D06AA /* TabBarBattery */,
 				D4BF936F1C5CB99D005D06AA /* TabBarProfile */,
+				D47BCBF51C60D87A00B4C057 /* SettingService */,
+				D47BCC091C60E85200B4C057 /* SettingMessage */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -512,12 +621,6 @@
 		D4BF93731C5CB99D005D06AA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D4B28E781C5DD89A00259F89 /* ICProfileAddressCell.h */,
-				D4B28E791C5DD89A00259F89 /* ICProfileAddressCell.m */,
-				D4B28E9C1C5DE0A900259F89 /* ICProfilePortCell.h */,
-				D4B28E9D1C5DE0A900259F89 /* ICProfilePortCell.m */,
-				D42E3F5D1C5E202E00DBA224 /* ICProfileTimeoutCell.h */,
-				D42E3F5E1C5E202E00DBA224 /* ICProfileTimeoutCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -559,6 +662,8 @@
 		D4BF93781C5CB99D005D06AA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D4CB2E3E1C60836400311399 /* ICTabBar.h */,
+				D4CB2E3F1C60836400311399 /* ICTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -694,17 +799,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4B28E9E1C5DE0A900259F89 /* ICProfilePortCell.m in Sources */,
 				D4B28EB81C5E0E8E00259F89 /* MUBottomPopView.m in Sources */,
+				D47BCC021C60DA7400B4C057 /* ICProfileTimeoutCell.m in Sources */,
 				D4B28E9A1C5DDDF600259F89 /* UIView+Extension.m in Sources */,
 				D4BF93881C5CBF13005D06AA /* ICBatteryViewController.m in Sources */,
+				D4CB2E3D1C6080E600311399 /* ICSegmentedControl.m in Sources */,
 				D4BF93421C5CB741005D06AA /* main.m in Sources */,
+				D47BCBFC1C60D8B100B4C057 /* ICServiceViewController.m in Sources */,
+				D47BCC061C60DA9F00B4C057 /* ICPortCalculator.m in Sources */,
 				D4BF93821C5CBD32005D06AA /* ICMainViewController.m in Sources */,
 				D4B28EB41C5E0E8E00259F89 /* MUBottomPopDatePickerView.m in Sources */,
 				D4B28EB31C5E0E8E00259F89 /* MUBottomPopCityPickerView.m in Sources */,
+				D4CB2E401C60836400311399 /* ICTabBar.m in Sources */,
 				D4BF93851C5CBE9A005D06AA /* ICDeviceViewController.m in Sources */,
 				D4B28E941C5DDDF600259F89 /* UIBarButtonItem+Extension.m in Sources */,
-				D4B28E7A1C5DD89A00259F89 /* ICProfileAddressCell.m in Sources */,
+				D484F90F1C60E87500837BD0 /* ICMessageViewController.m in Sources */,
 				D4BF938B1C5CBF91005D06AA /* ICProfileViewController.m in Sources */,
 				D4B28E981C5DDDF600259F89 /* UINavigationBar+Extension.m in Sources */,
 				D4B28E961C5DDDF600259F89 /* UIColor+Extension.m in Sources */,
@@ -713,10 +822,11 @@
 				D4B28E951C5DDDF600259F89 /* UIButton+Extension.m in Sources */,
 				D42E3F671C5E600B00DBA224 /* ICGroupTableViewTools.m in Sources */,
 				D4BF937F1C5CBD0C005D06AA /* ICTabBarViewController.m in Sources */,
+				D47BCC081C60DB7500B4C057 /* ICProfilePortCell.m in Sources */,
+				D47BCC031C60DA7400B4C057 /* ICProfileAddressCell.m in Sources */,
 				D4B28EB61C5E0E8E00259F89 /* MUBottomPopNumberPickerView.m in Sources */,
 				D4B28EB71C5E0E8E00259F89 /* MUBottomPopPickerView.m in Sources */,
 				D4B28E7E1C5DD96A00259F89 /* ICTableViewCell.m in Sources */,
-				D42E3F5F1C5E202E00DBA224 /* ICProfileTimeoutCell.m in Sources */,
 				D4B28EB51C5E0E8E00259F89 /* MUBottomPopGroupPickerView.m in Sources */,
 				D4BF93791C5CB99D005D06AA /* ICAppDelegate.m in Sources */,
 				D42E3F641C5E28BF00DBA224 /* ICNavigationController.m in Sources */,

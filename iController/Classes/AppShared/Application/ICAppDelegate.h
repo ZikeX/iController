@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) UIWindow *window;
 
-@property (nonatomic, strong) ICTabBarViewController *tabBarViewController;
+@property (nonatomic, strong, readonly) ICTabBarViewController *tabBarViewController;
 
 + (instancetype)sharedDelegate;
 

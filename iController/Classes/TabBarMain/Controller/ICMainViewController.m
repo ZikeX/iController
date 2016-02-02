@@ -39,14 +39,12 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-//	self.tableView.backgroundColor = Const_Color_Background;
-//	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-	UIImage *image = [UIImage imageNamed:@"switch_normal"];
-	UIImage *selectedImage = [UIImage imageNamed:@"switch_highlight"];
+	UIImage *image = [UIImage imageNamed:@"button_normal"];
+	UIImage *selectedImage = [UIImage imageNamed:@"button_highlight"];
 	UIButton *button = [UIButton new];
-	button.imageForDeselectNormal = image;
-	button.imageForDeselectHighlighted = selectedImage;
-	[button sizeToFit];
+	button.backgroundImageForDeselectNormal = image;
+	button.backgroundImageForDeselectHighlighted = selectedImage;
+	button.side = 300;
 	[self.view addSubview:button];
 }
 

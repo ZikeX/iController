@@ -13,13 +13,13 @@
 
 @interface ICTabBarViewController : UITabBarController
 
-@property (nonatomic, strong) ICMainViewController *mainViewController;
+@property (nonatomic, strong, readonly) ICMainViewController *mainViewController;
 
-@property (nonatomic, strong) ICDeviceViewController *deviceViewController;
+@property (nonatomic, strong, readonly) ICDeviceViewController *deviceViewController;
 
-@property (nonatomic, strong) ICBatteryViewController *batteryViewController;
+@property (nonatomic, strong, readonly) ICBatteryViewController *batteryViewController;
 
-@property (nonatomic, strong) ICProfileViewController *profileViewController;
+@property (nonatomic, strong, readonly) ICProfileViewController *profileViewController;
 
 + (instancetype)sharedTabBarController;
 

@@ -14,4 +14,6 @@
 
 - (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier;
 
+- (void)setIndexPath:(NSIndexPath *)indexPath withTableView:(UITableView *)tableView;
+
 @end

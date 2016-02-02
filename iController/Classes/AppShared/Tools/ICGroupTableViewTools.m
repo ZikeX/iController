@@ -8,13 +8,6 @@
 
 #import "ICGroupTableViewTools.h"
 
-typedef NS_ENUM(NSUInteger, ICGroupTableViewRowType) {
-	ICGroupTableViewRowTypeSingle,
-	ICGroupTableViewRowTypeTop,
-	ICGroupTableViewRowTypeMiddle,
-	ICGroupTableViewRowTypeButtom,
-};
-
 @implementation ICGroupTableViewTools
 
 + (UIImage *)tableView:(UITableView *)tableView deselectRowBackgroundImageForIndexPath:(NSIndexPath *)indexPath {
@@ -48,6 +41,20 @@ typedef NS_ENUM(NSUInteger, ICGroupTableViewRowType) {
 	} else {
 		return ICGroupTableViewRowTypeMiddle;
 	}
+}
+
+@end
+
+
+@implementation UITableViewCell (BackgroundView)
+
+- (void)setBackgroundViewForTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
+	UIImage *backgroundImage = [ICGroupTableViewTools tableView:tableView deselectRowBackgroundImageForIndexPath:indexPath];
+	UIImage *selectedImage = [ICGroupTableViewTools tableView:tableView selectRowBackgroundImageForIndexPath:indexPath];
+	UIImageView *backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
+	UIImageView *selectedView = [[UIImageView alloc] initWithImage:selectedImage];
+	self.backgroundView = backgroundView;
+	self.selectedBackgroundView = selectedView;
 }
 
 @end
