@@ -6,7 +6,7 @@
 //  Copyright © 2016年 unique. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ICGroupTableViewController.h"
 
 @interface ICProfileViewController : UITableViewController
 

@@ -36,13 +36,16 @@
 	[super layoutSubviews];
 	self.textLabel.midX += 10;
 	self.detailTextLabel.midX -= 10;
+	self.accessoryView.midX -= 10;
 	switch (_rowType) {
 		case ICGroupTableViewRowTypeTop: {
-			self.textLabel.midY++;
+			self.textLabel.midY += 2.5;
+			self.detailTextLabel.midX += 2.5;
 			break;
 		}
 		case ICGroupTableViewRowTypeButtom: {
-			self.textLabel.midY--;
+			self.textLabel.midY -= 2.5;
+			self.detailTextLabel.midX -= 2.5;
 			break;
 		}
 		default: {
@@ -53,6 +56,9 @@
 
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
 	[super setHighlighted:highlighted animated:animated];
+	if (self.selectionStyle == UITableViewCellSelectionStyleNone) {
+		return ;
+	}
 	if (highlighted) {
 			self.textLabel.textColor = [UIColor whiteColor];
 			self.detailTextLabel.textColor = [UIColor whiteColor];
@@ -95,8 +101,21 @@
 	}
 }
 
+#pragma mark - Public method
+
 - (void)setIndexPath:(NSIndexPath *)indexPath withTableView:(UITableView *)tableView {
 	SetCellBackgroundView(self, tableView, indexPath);
+	[self setNeedsLayout];
+}
+
+#pragma mark - Property getter
+
+- (NSString *)textLabelText {
+	return self.textLabel.text;
+}
+
+- (void)setTextLabelText:(NSString *)textLabelText {
+	self.textLabel.text = textLabelText;
 }
 
 @end

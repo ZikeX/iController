@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>titleForCell</key>
+		<string>服务器设置</string>
+		<key>titleForFooter</key>
+		<string>修改服务器地址, 端口号, 最长等待时间</string>
+		<key>classForController</key>
+		<string>ICServiceViewController</string>
+	</dict>
+	<dict>
+		<key>titleForCell</key>
+		<string>消息设置</string>
+		<key>titleForFooter</key>
+		<string>笔记本低电量消息, 有新设备连接消息</string>
+		<key>classForController</key>
+		<string>ICMessageViewController</string>
+	</dict>
+	<dict>
+		<key>titleForCell</key>
+		<string>使用帮助</string>
+		<key>titleForFooter</key>
+		<string>iOS端软件使用方式, Windows端软件使用方式</string>
+		<key>classForController</key>
+		<string>ICHelpListViewController</string>
+	</dict>
+	<dict>
+		<key>titleForCell</key>
+		<string>意见反馈</string>
+		<key>titleForFooter</key>
+		<string>提交软件bug, 数据错误, 您的建议</string>
+		<key>classForController</key>
+		<string>UIViewController</string>
+	</dict>
+	<dict>
+		<key>titleForCell</key>
+		<string>关于</string>
+		<key>titleForFooter</key>
+		<string>关于软件, 作者</string>
+		<key>classForController</key>
+		<string>UIViewController</string>
+	</dict>
+</array>
+</plist>

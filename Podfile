@@ -8,6 +8,7 @@ target 'iController' do
 pod 'MJRefresh'
 pod 'MJExtension'
 pod 'AFNetworking'
+pod 'MBProgressHUD'
 
 end
 

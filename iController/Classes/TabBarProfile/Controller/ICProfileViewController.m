@@ -12,6 +12,8 @@
 #import "ICMessageViewController.h"
 #import "ICTableViewCell.h"
 
+#import "ICProfileItem.h"
+
 #define IP_MaxValue @[@(255), @(255), @(255), @(255)]
 
 @interface ICProfileViewController ()
@@ -20,6 +22,8 @@
 	ICProfilePortCell		*_portCell;
 	ICProfileTimeoutCell	*_timeoutCell;
 }
+
+@property (nonatomic, strong) NSArray<ICProfileItem *> *items;
 
 @end
 
@@ -53,7 +57,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	return 2;
+	return self.items.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -68,28 +72,30 @@
 	}
 	[cell setIndexPath:indexPath withTableView:tableView];
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	NSArray *titles = @[@"服务器设置", @"消息设置"];
-	cell.textLabel.text = titles[indexPath.section];
+	cell.textLabel.text = self.items[indexPath.section].titleForCell;
 	return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-	if (section == 0) {
-		return @"修改服务器地址, 端口号, 最长等待时间";
-	} else if (section == 1) {
-		return @"笔记本低电量消息, 有新设备连接消息";
+	if (section < self.items.count) {
+		return self.items[section].description;
 	}
 	return nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-	if (indexPath.section == 0) {
-		[self.navigationController pushViewController:[ICServiceViewController new] animated:YES];
-	} else if (indexPath.section == 1) {
-		[self.navigationController pushViewController:[ICMessageViewController new] animated:YES];
+	Class ViewController = NSClassFromString(self.items[indexPath.section].classForController);
+	UIViewController *viewController = [ViewController new];
+	[self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (NSArray<ICProfileItem *> *)items {
+	if (!_items) {
+		NSString *path = [[NSBundle mainBundle] pathForResource:@"Profile" ofType:@"plist"];
+		_items = [ICProfileItem mj_objectArrayWithFile:path];
 	}
-	
+	return _items;
 }
 
 @end

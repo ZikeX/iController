@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>titleForFooter</key>
+		<string>    IP地址指电脑端的地址. 手机通过该IP地址与电脑连接. 您可以打开电脑端软件查看电脑的IP地址并在此输入. (一般情况下, IP地址以&quot;192.168.&quot;开头)</string>
+	</dict>
+	<dict>
+		<key>titleForFooter</key>
+		<string>    端口号指电脑端端口号, 电脑端端口号可以修改, 但最好别与常用的TCP端口重复. 同时必须保证电脑的端口号与此处的端口号相同. (端口号不能超过65535, 建议大于19730)</string>
+	</dict>
+	<dict>
+		<key>titleForFooter</key>
+		<string>    超时等待时间, 连接与发送命令到电脑端时, 超出该时间没响应代表失败.</string>
+	</dict>
+	<dict>
+		<key>titleForFooter</key>
+		<string>    以上所有设置需重启 App 方能生效.</string>
+	</dict>
+</array>
+</plist>

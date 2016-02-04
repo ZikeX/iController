@@ -8,8 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		85DAE448DE85FA823BE32105 /* libPods-iController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7C5C558FD000A489DEFD19 /* libPods-iController.a */; };
+		D41A53651C63C23600F41533 /* ICBatteryStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = D41A53641C63C23600F41533 /* ICBatteryStatus.m */; };
+		D41A53681C63C60800F41533 /* ICDeviceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D41A53671C63C60800F41533 /* ICDeviceItem.m */; };
+		D41A536B1C63C79E00F41533 /* ICDeviceGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = D41A536A1C63C79E00F41533 /* ICDeviceGroup.m */; };
+		D41A536E1C63C8E600F41533 /* ICProfileItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D41A536D1C63C8E600F41533 /* ICProfileItem.m */; };
+		D41A53701C63C95C00F41533 /* Profile.plist in Resources */ = {isa = PBXBuildFile; fileRef = D41A536F1C63C95C00F41533 /* Profile.plist */; };
+		D41A53781C63D08F00F41533 /* ICHelpListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41A53771C63D08F00F41533 /* ICHelpListViewController.m */; };
+		D41A537B1C63D0B400F41533 /* ICHelpListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D41A537A1C63D0B400F41533 /* ICHelpListItem.m */; };
+		D41A537E1C63D0BF00F41533 /* ICHelpListBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = D41A537D1C63D0BF00F41533 /* ICHelpListBundle.m */; };
+		D41A53801C63D19B00F41533 /* HelpList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D41A537F1C63D19B00F41533 /* HelpList.plist */; };
+		D41A53841C63D68300F41533 /* ICGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41A53831C63D68300F41533 /* ICGroupTableViewController.m */; };
 		D42E3F641C5E28BF00DBA224 /* ICNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D42E3F631C5E28BF00DBA224 /* ICNavigationController.m */; };
 		D42E3F671C5E600B00DBA224 /* ICGroupTableViewTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D42E3F661C5E600B00DBA224 /* ICGroupTableViewTools.m */; };
+		D46465A71C63DD8500E5A268 /* ICServiceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D46465A61C63DD8500E5A268 /* ICServiceItem.m */; };
+		D46465A91C63DDDC00E5A268 /* ServiceList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D46465A81C63DDDC00E5A268 /* ServiceList.plist */; };
 		D47BCBFC1C60D8B100B4C057 /* ICServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D47BCBFB1C60D8B100B4C057 /* ICServiceViewController.m */; };
 		D47BCC021C60DA7400B4C057 /* ICProfileTimeoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D47BCBFF1C60DA7400B4C057 /* ICProfileTimeoutCell.m */; };
 		D47BCC031C60DA7400B4C057 /* ICProfileAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D47BCC001C60DA7400B4C057 /* ICProfileAddressCell.m */; };
@@ -49,10 +61,31 @@
 		225900FC28075EC794090DAB /* Pods-iController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iController.release.xcconfig"; path = "Pods/Target Support Files/Pods-iController/Pods-iController.release.xcconfig"; sourceTree = "<group>"; };
 		8A7C5C558FD000A489DEFD19 /* libPods-iController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C999C7AA71CD9377E79BABB8 /* Pods-iController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iController/Pods-iController.debug.xcconfig"; sourceTree = "<group>"; };
+		D41A53631C63C23600F41533 /* ICBatteryStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICBatteryStatus.h; sourceTree = "<group>"; };
+		D41A53641C63C23600F41533 /* ICBatteryStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICBatteryStatus.m; sourceTree = "<group>"; };
+		D41A53661C63C60800F41533 /* ICDeviceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDeviceItem.h; sourceTree = "<group>"; };
+		D41A53671C63C60800F41533 /* ICDeviceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDeviceItem.m; sourceTree = "<group>"; };
+		D41A53691C63C79E00F41533 /* ICDeviceGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDeviceGroup.h; sourceTree = "<group>"; };
+		D41A536A1C63C79E00F41533 /* ICDeviceGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDeviceGroup.m; sourceTree = "<group>"; };
+		D41A536C1C63C8E600F41533 /* ICProfileItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICProfileItem.h; sourceTree = "<group>"; };
+		D41A536D1C63C8E600F41533 /* ICProfileItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICProfileItem.m; sourceTree = "<group>"; };
+		D41A536F1C63C95C00F41533 /* Profile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Profile.plist; sourceTree = "<group>"; };
+		D41A53761C63D08F00F41533 /* ICHelpListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICHelpListViewController.h; sourceTree = "<group>"; };
+		D41A53771C63D08F00F41533 /* ICHelpListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICHelpListViewController.m; sourceTree = "<group>"; };
+		D41A53791C63D0B400F41533 /* ICHelpListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICHelpListItem.h; sourceTree = "<group>"; };
+		D41A537A1C63D0B400F41533 /* ICHelpListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICHelpListItem.m; sourceTree = "<group>"; };
+		D41A537C1C63D0BF00F41533 /* ICHelpListBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICHelpListBundle.h; sourceTree = "<group>"; };
+		D41A537D1C63D0BF00F41533 /* ICHelpListBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICHelpListBundle.m; sourceTree = "<group>"; };
+		D41A537F1C63D19B00F41533 /* HelpList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HelpList.plist; sourceTree = "<group>"; };
+		D41A53821C63D68300F41533 /* ICGroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGroupTableViewController.h; sourceTree = "<group>"; };
+		D41A53831C63D68300F41533 /* ICGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGroupTableViewController.m; sourceTree = "<group>"; };
 		D42E3F621C5E28BF00DBA224 /* ICNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICNavigationController.h; sourceTree = "<group>"; };
 		D42E3F631C5E28BF00DBA224 /* ICNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICNavigationController.m; sourceTree = "<group>"; };
 		D42E3F651C5E600B00DBA224 /* ICGroupTableViewTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGroupTableViewTools.h; sourceTree = "<group>"; };
 		D42E3F661C5E600B00DBA224 /* ICGroupTableViewTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGroupTableViewTools.m; sourceTree = "<group>"; };
+		D46465A51C63DD8500E5A268 /* ICServiceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICServiceItem.h; sourceTree = "<group>"; };
+		D46465A61C63DD8500E5A268 /* ICServiceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICServiceItem.m; sourceTree = "<group>"; };
+		D46465A81C63DDDC00E5A268 /* ServiceList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ServiceList.plist; sourceTree = "<group>"; };
 		D47BCBFA1C60D8B100B4C057 /* ICServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICServiceViewController.h; sourceTree = "<group>"; };
 		D47BCBFB1C60D8B100B4C057 /* ICServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICServiceViewController.m; sourceTree = "<group>"; };
 		D47BCBFD1C60DA7400B4C057 /* ICProfilePortCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICProfilePortCell.h; sourceTree = "<group>"; };
@@ -142,10 +175,66 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D41A53711C63D06500F41533 /* SettingHelper */ = {
+			isa = PBXGroup;
+			children = (
+				D41A53721C63D06500F41533 /* Controller */,
+				D41A53731C63D06500F41533 /* Model */,
+				D41A53741C63D06500F41533 /* Tools */,
+				D41A53751C63D06500F41533 /* View */,
+			);
+			path = SettingHelper;
+			sourceTree = "<group>";
+		};
+		D41A53721C63D06500F41533 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D41A53761C63D08F00F41533 /* ICHelpListViewController.h */,
+				D41A53771C63D08F00F41533 /* ICHelpListViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D41A53731C63D06500F41533 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D41A53791C63D0B400F41533 /* ICHelpListItem.h */,
+				D41A537A1C63D0B400F41533 /* ICHelpListItem.m */,
+				D41A537C1C63D0BF00F41533 /* ICHelpListBundle.h */,
+				D41A537D1C63D0BF00F41533 /* ICHelpListBundle.m */,
+				D41A537F1C63D19B00F41533 /* HelpList.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D41A53741C63D06500F41533 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		D41A53751C63D06500F41533 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D41A53811C63D67100F41533 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				D41A53821C63D68300F41533 /* ICGroupTableViewController.h */,
+				D41A53831C63D68300F41533 /* ICGroupTableViewController.m */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		D42E3F601C5E28AD00DBA224 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				D42E3F611C5E28AD00DBA224 /* Navigation */,
+				D41A53811C63D67100F41533 /* TableView */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -182,6 +271,9 @@
 		D47BCBF71C60D87A00B4C057 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D46465A51C63DD8500E5A268 /* ICServiceItem.h */,
+				D46465A61C63DD8500E5A268 /* ICServiceItem.m */,
+				D46465A81C63DDDC00E5A268 /* ServiceList.plist */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -400,6 +492,7 @@
 				D4BF936F1C5CB99D005D06AA /* TabBarProfile */,
 				D47BCBF51C60D87A00B4C057 /* SettingService */,
 				D47BCC091C60E85200B4C057 /* SettingMessage */,
+				D41A53711C63D06500F41533 /* SettingHelper */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -484,6 +577,8 @@
 		D4BF93621C5CB99D005D06AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D41A53631C63C23600F41533 /* ICBatteryStatus.h */,
+				D41A53641C63C23600F41533 /* ICBatteryStatus.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -525,6 +620,10 @@
 		D4BF93671C5CB99D005D06AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D41A53661C63C60800F41533 /* ICDeviceItem.h */,
+				D41A53671C63C60800F41533 /* ICDeviceItem.m */,
+				D41A53691C63C79E00F41533 /* ICDeviceGroup.h */,
+				D41A536A1C63C79E00F41533 /* ICDeviceGroup.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -607,6 +706,9 @@
 		D4BF93711C5CB99D005D06AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D41A536C1C63C8E600F41533 /* ICProfileItem.h */,
+				D41A536D1C63C8E600F41533 /* ICProfileItem.m */,
+				D41A536F1C63C95C00F41533 /* Profile.plist */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -738,7 +840,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4B28EB91C5E0E8E00259F89 /* pcr.plist in Resources */,
+				D41A53701C63C95C00F41533 /* Profile.plist in Resources */,
+				D46465A91C63DDDC00E5A268 /* ServiceList.plist in Resources */,
 				D4B28E991C5DDDF600259F89 /* UINavigationBar.bundle in Resources */,
+				D41A53801C63D19B00F41533 /* HelpList.plist in Resources */,
 				D4BF934D1C5CB741005D06AA /* Assets.xcassets in Resources */,
 				D4BF938E1C5CC2B1005D06AA /* Localizable.strings in Resources */,
 			);
@@ -809,25 +914,34 @@
 				D47BCC061C60DA9F00B4C057 /* ICPortCalculator.m in Sources */,
 				D4BF93821C5CBD32005D06AA /* ICMainViewController.m in Sources */,
 				D4B28EB41C5E0E8E00259F89 /* MUBottomPopDatePickerView.m in Sources */,
+				D41A537E1C63D0BF00F41533 /* ICHelpListBundle.m in Sources */,
+				D41A53681C63C60800F41533 /* ICDeviceItem.m in Sources */,
 				D4B28EB31C5E0E8E00259F89 /* MUBottomPopCityPickerView.m in Sources */,
+				D41A536E1C63C8E600F41533 /* ICProfileItem.m in Sources */,
+				D41A537B1C63D0B400F41533 /* ICHelpListItem.m in Sources */,
+				D41A53841C63D68300F41533 /* ICGroupTableViewController.m in Sources */,
 				D4CB2E401C60836400311399 /* ICTabBar.m in Sources */,
 				D4BF93851C5CBE9A005D06AA /* ICDeviceViewController.m in Sources */,
 				D4B28E941C5DDDF600259F89 /* UIBarButtonItem+Extension.m in Sources */,
 				D484F90F1C60E87500837BD0 /* ICMessageViewController.m in Sources */,
 				D4BF938B1C5CBF91005D06AA /* ICProfileViewController.m in Sources */,
 				D4B28E981C5DDDF600259F89 /* UINavigationBar+Extension.m in Sources */,
+				D46465A71C63DD8500E5A268 /* ICServiceItem.m in Sources */,
 				D4B28E961C5DDDF600259F89 /* UIColor+Extension.m in Sources */,
 				D4B28EBC1C5E0EBA00259F89 /* ICUserDefaults.m in Sources */,
 				D4B28E971C5DDDF600259F89 /* UIImage+Extension.m in Sources */,
 				D4B28E951C5DDDF600259F89 /* UIButton+Extension.m in Sources */,
 				D42E3F671C5E600B00DBA224 /* ICGroupTableViewTools.m in Sources */,
 				D4BF937F1C5CBD0C005D06AA /* ICTabBarViewController.m in Sources */,
+				D41A53651C63C23600F41533 /* ICBatteryStatus.m in Sources */,
 				D47BCC081C60DB7500B4C057 /* ICProfilePortCell.m in Sources */,
 				D47BCC031C60DA7400B4C057 /* ICProfileAddressCell.m in Sources */,
+				D41A536B1C63C79E00F41533 /* ICDeviceGroup.m in Sources */,
 				D4B28EB61C5E0E8E00259F89 /* MUBottomPopNumberPickerView.m in Sources */,
 				D4B28EB71C5E0E8E00259F89 /* MUBottomPopPickerView.m in Sources */,
 				D4B28E7E1C5DD96A00259F89 /* ICTableViewCell.m in Sources */,
 				D4B28EB51C5E0E8E00259F89 /* MUBottomPopGroupPickerView.m in Sources */,
+				D41A53781C63D08F00F41533 /* ICHelpListViewController.m in Sources */,
 				D4BF93791C5CB99D005D06AA /* ICAppDelegate.m in Sources */,
 				D42E3F641C5E28BF00DBA224 /* ICNavigationController.m in Sources */,
 			);
@@ -883,7 +997,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -920,7 +1034,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

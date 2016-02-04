@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ICTableViewCell.h"
 
 #define SetCellBackgroundView(c, tv, ip) \
 [c setBackgroundViewForTableView:tv indexPath:ip]
@@ -29,7 +30,7 @@ typedef NS_ENUM(NSUInteger, ICGroupTableViewRowType) {
 
 
 
-@interface UITableViewCell (BackgroundView)
+@interface ICTableViewCell (BackgroundView)
 
 - (void)setBackgroundViewForTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
 

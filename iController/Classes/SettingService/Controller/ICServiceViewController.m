@@ -10,6 +10,7 @@
 #import "MUBottomPopNumberPickerView.h"
 #import "ICPortCalculator.h"
 #import "ICGroupTableViewTools.h"
+#import "ICServiceItem.h"
 
 #define IP_MaxValue		@[@(255), @(255), @(255), @(255)]
 #define Port_MaxValue	@[@(6), @(9), @(9), @(9), @(9)]
@@ -21,6 +22,8 @@
 	ICProfilePortCell		*_portCell;
 	ICProfileTimeoutCell	*_timeoutCell;
 }
+
+@property (nonatomic, strong) NSArray<ICServiceItem *> *items;
 
 @end
 
@@ -44,11 +47,11 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	return 3;
+	return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return 1;
+	return section == [self numberOfSectionsInTableView:tableView] - 1 ? 0 : 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -72,12 +75,8 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-	if (section == 0) {
-		return @"\tIP地址指电脑端的地址. 手机通过该IP地址与电脑连接. 您可以打开电脑端软件查看电脑的IP地址并在此输入. (一般情况下, IP地址以\"192.168.\"开头)";
-	} else if (section == 1) {
-		return @"\t端口号指电脑端端口号, 电脑端端口号可以修改, 但最好别与常用的TCP端口重复. 同时必须保证电脑的端口号与此处的端口号相同. (端口号不能超过65535)";
-	} else if (section == 2) {
-		return @"\t超时等待时间, 连接与发送命令到电脑端时, 超出该时间没响应代表失败.";
+	if (section < [self numberOfSectionsInTableView:tableView]) {
+		return self.items[section].titleForFooter;
 	}
 	return nil;
 }
@@ -197,6 +196,14 @@
 		SetCellBackgroundView(_timeoutCell, self.tableView, indexPath);
 	}
 	return _timeoutCell;
+}
+
+- (NSArray<ICServiceItem *> *)items {
+	if (!_items) {
+		NSString *path = [[NSBundle mainBundle] pathForResource:@"ServiceList" ofType:@"plist"];
+		_items = [ICServiceItem mj_objectArrayWithFile:path];
+	}
+	return _items;
 }
 
 @end

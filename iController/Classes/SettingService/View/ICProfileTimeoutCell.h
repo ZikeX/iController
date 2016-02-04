@@ -6,9 +6,9 @@
 //  Copyright © 2016年 unique. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ICTableViewCell.h"
 
-@interface ICProfileTimeoutCell : UITableViewCell
+@interface ICProfileTimeoutCell : ICTableViewCell
 
 @property (nonatomic, assign) NSUInteger timeout;
 

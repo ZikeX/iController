@@ -21,12 +21,6 @@
 	return self;
 }
 
-- (void)layoutSubviews {
-	[super layoutSubviews];
-	self.textLabel.midX += 10;
-	self.detailTextLabel.midX -= 10;
-}
-
 - (void)setPort:(NSUInteger)port {
 	self.detailTextLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)port];
 }

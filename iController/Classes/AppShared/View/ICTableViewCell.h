@@ -10,6 +10,8 @@
 
 @interface ICTableViewCell : UITableViewCell
 
+@property (nonatomic, copy) NSString *textLabelText;
+
 + (instancetype)cellForTableView:(UITableView *)tableView;
 
 - (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier;

@@ -22,12 +22,6 @@
 	return self;
 }
 
-- (void)layoutSubviews {
-	[super layoutSubviews];
-	self.textLabel.midX += 10;
-	self.detailTextLabel.midX -= 10;
-}
-
 - (void)setTimeout:(NSUInteger)timeout {
 	self.detailTextLabel.text = [NSString stringWithFormat:@"%lu 秒", (unsigned long)timeout];
 }

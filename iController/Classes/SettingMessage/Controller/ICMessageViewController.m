@@ -30,11 +30,11 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	return 2;
+	return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return 1;
+	return section == [self numberOfSectionsInTableView:tableView] - 1 ? 0 : 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -55,9 +55,12 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
 	if (section == 0) {
-		return @"当笔记本使用电池并且低于一定量的时候主动提醒";
+		return @"当笔记本断开交流电并且电池低于一定量的时候主动提醒";
 	} else if (section == 1) {
-		return @"当有新的设备连接到WiFi时主动提醒";
+		return @"当有新的设备连接到WiFi时主动提醒, 该功能需要电脑端开启自动刷新设备功能";
+	} else if (section == 2) {
+		NSString *appName = [[NSBundle mainBundle] infoDictionary][@"CFBundleName"];
+		return [NSString stringWithFormat:@"若要接收到推送通知, 请到【设置】->【通知】->【%@】中打开【允许通知】开关", appName];
 	}
 	return nil;
 }

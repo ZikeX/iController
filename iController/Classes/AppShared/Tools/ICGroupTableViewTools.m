@@ -46,7 +46,7 @@
 @end
 
 
-@implementation UITableViewCell (BackgroundView)
+@implementation ICTableViewCell (BackgroundView)
 
 - (void)setBackgroundViewForTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
 	UIImage *backgroundImage = [ICGroupTableViewTools tableView:tableView deselectRowBackgroundImageForIndexPath:indexPath];
@@ -55,6 +55,7 @@
 	UIImageView *selectedView = [[UIImageView alloc] initWithImage:selectedImage];
 	self.backgroundView = backgroundView;
 	self.selectedBackgroundView = selectedView;
+	[self setValue:@([ICGroupTableViewTools tableView:tableView rowTypeForIndexPath:indexPath]) forKey:@"_rowType"];
 }
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright © 2016年 unique. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ICTableViewCell.h"
 
-@interface ICProfileAddressCell : UITableViewCell
+@interface ICProfileAddressCell : ICTableViewCell
 
 @property (nonatomic, copy) NSString *address;
 
