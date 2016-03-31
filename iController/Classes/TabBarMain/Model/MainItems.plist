@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>titleForCell</key>
+		<string>显示器</string>
+		<key>titleForHeader</key>
+		<string>显示器开关</string>
+		<key>titleForFooter</key>
+		<string>打开或者关闭显示器</string>
+		<key>classForController</key>
+		<string>ICMCScreenViewController</string>
+	</dict>
+	<dict>
+		<key>titleForCell</key>
+		<string>鼠标呼吸灯</string>
+		<key>titleForHeader</key>
+		<string>鼠标呼吸灯开关</string>
+		<key>titleForFooter</key>
+		<string>打开或者关闭鼠标呼吸灯</string>
+		<key>classForController</key>
+		<string>ICMCMouseViewController</string>
+	</dict>
+	<dict>
+		<key>titleForCell</key>
+		<string>音量</string>
+		<key>titleForHeader</key>
+		<string>音量设置</string>
+		<key>titleForFooter</key>
+		<string>调整音量百分比</string>
+		<key>classForController</key>
+		<string>ICMCVolumeViewController</string>
+	</dict>
+	<dict>
+		<key>titleForCell</key>
+		<string>电源</string>
+		<key>titleForHeader</key>
+		<string>关机</string>
+		<key>titleForFooter</key>
+		<string>自动关机或手动关机</string>
+		<key>classForController</key>
+		<string>UIViewController</string>
+	</dict>
+</array>
+</plist>

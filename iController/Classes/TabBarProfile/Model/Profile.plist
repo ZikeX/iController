@@ -40,7 +40,7 @@
 		<key>titleForFooter</key>
 		<string>关于软件, 作者</string>
 		<key>classForController</key>
-		<string>UIViewController</string>
+		<string>ICAboutViewController</string>
 	</dict>
 </array>
 </plist>

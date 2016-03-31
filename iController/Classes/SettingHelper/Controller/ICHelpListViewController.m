@@ -10,6 +10,8 @@
 #import "ICHelpListBundle.h"
 #import "ICTableViewCell.h"
 
+#import "ICHTMLBrowerViewController.h"
+
 @interface ICHelpListViewController ()
 
 @property (nonatomic, strong) ICHelpListBundle *bundle;
@@ -64,9 +66,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-	NSString *ViewControllerName = self.bundle.itemsArray[indexPath.section][indexPath.row].url;
-	Class ViewControllerClass = NSClassFromString(ViewControllerName);
-	[self.navigationController pushViewController:[ViewControllerClass new] animated:YES];
+	ICHTMLBrowerViewController *viewController = [[ICHTMLBrowerViewController alloc] initWithFileName:@"index"];
+	[self.navigationController pushViewController:viewController animated:YES];
+	
+	
+//	NSString *ViewControllerName = self.bundle.itemsArray[indexPath.section][indexPath.row].url;
+//	Class ViewControllerClass = NSClassFromString(ViewControllerName);
+//	[self.navigationController pushViewController:[ViewControllerClass new] animated:YES];
 }
 
 - (ICHelpListBundle *)bundle {

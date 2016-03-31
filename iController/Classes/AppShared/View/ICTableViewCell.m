@@ -8,6 +8,7 @@
 
 #import "ICTableViewCell.h"
 #import "ICGroupTableViewTools.h"
+#import "ICSwitch.h"
 
 @interface ICTableViewCell ()
 {
@@ -34,9 +35,9 @@
 
 - (void)layoutSubviews {
 	[super layoutSubviews];
-	self.textLabel.midX += 10;
-	self.detailTextLabel.midX -= 10;
-	self.accessoryView.midX -= 10;
+	self.textLabel.toSuperViewLeft = 20;
+	self.detailTextLabel.toSuperViewRight = 20;
+	self.accessoryView.toSuperViewRight = 10;
 	switch (_rowType) {
 		case ICGroupTableViewRowTypeTop: {
 			self.textLabel.midY += 2.5;
@@ -51,6 +52,9 @@
 		default: {
 			
 		}
+	}
+	if ([self.accessoryView isKindOfClass:[ICSwitch class]]) {
+		self.accessoryView.toSuperViewRight = 20;
 	}
 }
 

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>linking</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>双 的 iPhone</string>
+			<key>mac</key>
+			<string>aa:bb:cc:dd:ee:ff</string>
+			<key>brand</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>双 的 iPhone 6s</string>
+			<key>mac</key>
+			<string>ff:ee:cc:dd:bb:aa</string>
+			<key>brand</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>双 的 MacBook Pro</string>
+			<key>mac</key>
+			<string>xx:xx:xx:xx:xx:xx</string>
+			<key>brand</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>未知设备</string>
+			<key>mac</key>
+			<string>hh:dd:b:xx:ww:qq</string>
+			<key>brand</key>
+			<string>0</string>
+		</dict>
+	</array>
+	<key>saved</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>双 的 MacBook Pro</string>
+			<key>mac</key>
+			<string>xx:xx:xx:xx:xx:xx</string>
+			<key>brand</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>双 的 iPhone 6s</string>
+			<key>mac</key>
+			<string>ff:ee:cc:dd:bb:aa</string>
+			<key>brand</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>双 的 iPhone</string>
+			<key>mac</key>
+			<string>aa:bb:cc:dd:ee:ff</string>
+			<key>brand</key>
+			<string>0</string>
+		</dict>
+	</array>
+</dict>
+</plist>

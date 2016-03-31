@@ -8,7 +8,7 @@
 
 #import "ICNavigationController.h"
 
-@interface ICNavigationController ()
+@interface ICNavigationController () <UIGestureRecognizerDelegate, UINavigationControllerDelegate>
 
 @end
 
@@ -18,6 +18,9 @@
     [super viewDidLoad];
 	[self.navigationBar setBackgroundImage:[UIImage imageNamed:@"titlebar_bg"] forBarMetrics:UIBarMetricsDefault];
 	[self.navigationBar setShadowImage:[UIImage imageNamed:@"titlebar_bg_shadow"]];
+	[self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:Const_Color_Title}];
+	self.interactivePopGestureRecognizer.delegate = self;
+	self.delegate = self;
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
@@ -33,10 +36,14 @@
 		[button sizeToFit];
 		button.width = 70;
 		viewController.navigationItem.leftBarButtonItem =[[UIBarButtonItem alloc] initWithCustomView:button];
-//		viewController.navigationItem.leftBarButtonItem = ;
+		viewController.hidesBottomBarWhenPushed = YES;
 	}
 	viewController.view.backgroundColor = Const_Color_Background;
+	self.interactivePopGestureRecognizer.enabled = NO;
 	[super pushViewController:viewController animated:animated];
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
 	self.interactivePopGestureRecognizer.enabled = YES;
 }
 

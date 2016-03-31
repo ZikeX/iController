@@ -9,9 +9,6 @@
 #import "ICAppDelegate.h"
 
 @interface ICAppDelegate ()
-{
-	UIWindow *_window;
-}
 
 @end
 
@@ -26,6 +23,14 @@
 	[application registerForRemoteNotifications];
 	return YES;
 }
+
+//- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+//	
+//}
+//
+//- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+//	
+//}
 
 - (UIWindow *)window {
 	if (!_window) {

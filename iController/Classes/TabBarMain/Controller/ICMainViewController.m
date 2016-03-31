@@ -8,8 +8,12 @@
 
 #import "ICMainViewController.h"
 #import "ICGroupTableViewTools.h"
+#import "ICTableViewCell.h"
+#import "ICMainItem.h"
 
 @interface ICMainViewController ()
+
+@property (nonatomic, strong) NSArray<ICMainItem *> *items;
 
 @end
 
@@ -25,8 +29,8 @@
 }
 
 - (instancetype)init {
-//	self = [super initWithStyle:UITableViewStyleGrouped];
-	self = [super init];
+	self = [super initWithStyle:UITableViewStyleGrouped];
+//	self = [super init];
 	if (self) {
 		self.title = NSLocalizedString(@"TabBar.Main.Title", nil);
 		self.navigationItem.title = self.title;
@@ -39,40 +43,46 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	UIImage *image = [UIImage imageNamed:@"button_normal"];
-	UIImage *selectedImage = [UIImage imageNamed:@"button_highlight"];
-	UIButton *button = [UIButton new];
-	button.backgroundImageForDeselectNormal = image;
-	button.backgroundImageForDeselectHighlighted = selectedImage;
-	button.side = 300;
-	[self.view addSubview:button];
+	self.tableView.backgroundColor = Const_Color_Background;
+	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    return self.items.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return 1;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (ICTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	static NSString *identifier = @"identifier";
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+	ICTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
 	if (!cell) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
-		cell.backgroundColor = [UIColor clearColor];
+		cell = [[ICTableViewCell alloc] initWithReuseIdentifier:identifier];
+		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}
-	cell.textLabel.text = [self titleForIndexPath:indexPath];
-	cell.backgroundView = [[UIImageView alloc] initWithImage:[ICGroupTableViewTools tableView:tableView deselectRowBackgroundImageForIndexPath:indexPath]];
-	cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[ICGroupTableViewTools tableView:tableView selectRowBackgroundImageForIndexPath:indexPath]];
+	[cell setIndexPath:indexPath withTableView:tableView];
+	cell.textLabel.text = self.items[indexPath.section].titleForCell;
 	return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	return self.items[section].titleForHeader;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+	return self.items[section].titleForFooter;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	NSString *ViewControllerName = self.items[indexPath.section].classForController;
+	Class ViewController = NSClassFromString(ViewControllerName);
+	UIViewController *viewController = [[ViewController alloc] init];
+	[self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (NSString *)titleForIndexPath:(NSIndexPath *)indexPath {
@@ -84,6 +94,14 @@
 		title = [@"关闭" stringByAppendingString:title];
 	}
 	return title;
+}
+
+- (NSArray<ICMainItem *> *)items {
+	if (!_items) {
+		NSString *path = [[NSBundle mainBundle] pathForResource:@"MainItems" ofType:@"plist"];
+		_items = [ICMainItem mj_objectArrayWithFile:path];
+	}
+	return _items;
 }
 
 @end

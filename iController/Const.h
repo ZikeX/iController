@@ -14,6 +14,7 @@
 
 #define Const_Color_Title		[UIColor colorWithWhite:0.35 alpha:1]
 #define Const_Color_Subtitle	[UIColor colorWithWhite:0.693 alpha:1.000]
+#define Const_Color_Highlight	[UIColor whiteColor]
 #define Const_Color_Background	[UIColor colorWithWhite:0.97 alpha:1.000]
 
 #endif /* Const_h */

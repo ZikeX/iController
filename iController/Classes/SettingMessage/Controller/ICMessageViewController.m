@@ -8,6 +8,7 @@
 
 #import "ICMessageViewController.h"
 #import "ICTableViewCell.h"
+#import "ICSwitch.h"
 
 @interface ICMessageViewController ()
 
@@ -43,9 +44,11 @@
 	if (!cell) {
 		cell = [[ICTableViewCell alloc] initWithReuseIdentifier:identifier];
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
-		UISwitch *on = [UISwitch new];
-		on.onTintColor = Const_Color_Title;
-		cell.accessoryView = on;;
+		ICSwitch *on = [[ICSwitch alloc] initWithStyle:ICSwitchStyleBlue];
+		cell.accessoryView = on;
+//		UISwitch *on = [UISwitch new];
+//		on.onTintColor = Const_Color_Title;
+//		cell.accessoryView = on;;
 	}
 	[cell setIndexPath:indexPath withTableView:tableView];
 	NSArray *titles = @[@"低电量推送", @"新设备推送"];

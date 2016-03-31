@@ -10,11 +10,11 @@
         "center" : {
           "mode" : "stretch",
           "width" : 1,
-          "height" : 1
+          "height" : 97
         },
         "cap-insets" : {
           "bottom" : 1,
-          "top" : 102,
+          "top" : 6,
           "right" : 7,
           "left" : 7
         }

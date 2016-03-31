@@ -87,7 +87,11 @@
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 	Class ViewController = NSClassFromString(self.items[indexPath.section].classForController);
 	UIViewController *viewController = [ViewController new];
-	[self.navigationController pushViewController:viewController animated:YES];
+	if (indexPath.section == self.items.count - 1) {
+		[self presentViewController:viewController animated:YES completion:nil];
+	} else {
+		[self.navigationController pushViewController:viewController animated:YES];
+	}
 }
 
 - (NSArray<ICProfileItem *> *)items {

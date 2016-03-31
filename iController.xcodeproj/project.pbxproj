@@ -18,8 +18,19 @@
 		D41A537E1C63D0BF00F41533 /* ICHelpListBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = D41A537D1C63D0BF00F41533 /* ICHelpListBundle.m */; };
 		D41A53801C63D19B00F41533 /* HelpList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D41A537F1C63D19B00F41533 /* HelpList.plist */; };
 		D41A53841C63D68300F41533 /* ICGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41A53831C63D68300F41533 /* ICGroupTableViewController.m */; };
+		D41D89381C687478008F3AFD /* ICAddressCalulator.m in Sources */ = {isa = PBXBuildFile; fileRef = D41D89371C687478008F3AFD /* ICAddressCalulator.m */; };
+		D41D893D1C687760008F3AFD /* ICMCMouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41D893C1C687760008F3AFD /* ICMCMouseViewController.m */; };
+		D41D89421C6879AF008F3AFD /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = D41D89411C6879AF008F3AFD /* index.html */; };
+		D41D89471C687A11008F3AFD /* ICHTMLBrowerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41D89461C687A11008F3AFD /* ICHTMLBrowerViewController.m */; };
+		D41D89491C687D57008F3AFD /* DeviceItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = D41D89481C687D57008F3AFD /* DeviceItems.plist */; };
 		D42E3F641C5E28BF00DBA224 /* ICNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D42E3F631C5E28BF00DBA224 /* ICNavigationController.m */; };
 		D42E3F671C5E600B00DBA224 /* ICGroupTableViewTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D42E3F661C5E600B00DBA224 /* ICGroupTableViewTools.m */; };
+		D44AA1C11C6729D900B66563 /* ICSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = D44AA1C01C6729D900B66563 /* ICSwitch.m */; };
+		D44AA1C41C672D8C00B66563 /* ICMainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D44AA1C31C672D8C00B66563 /* ICMainItem.m */; };
+		D44AA1C61C672DC700B66563 /* MainItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = D44AA1C51C672DC700B66563 /* MainItems.plist */; };
+		D44AA1D01C67314200B66563 /* ICMainControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D44AA1CF1C67314200B66563 /* ICMainControlViewController.m */; };
+		D44AA1D31C67317500B66563 /* ICControlButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D44AA1D21C67317500B66563 /* ICControlButton.m */; };
+		D44AA1D61C6734BC00B66563 /* ICMCScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D44AA1D51C6734BC00B66563 /* ICMCScreenViewController.m */; };
 		D46465A71C63DD8500E5A268 /* ICServiceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D46465A61C63DD8500E5A268 /* ICServiceItem.m */; };
 		D46465A91C63DDDC00E5A268 /* ServiceList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D46465A81C63DDDC00E5A268 /* ServiceList.plist */; };
 		D47BCBFC1C60D8B100B4C057 /* ICServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D47BCBFB1C60D8B100B4C057 /* ICServiceViewController.m */; };
@@ -28,6 +39,9 @@
 		D47BCC061C60DA9F00B4C057 /* ICPortCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = D47BCC051C60DA9F00B4C057 /* ICPortCalculator.m */; };
 		D47BCC081C60DB7500B4C057 /* ICProfilePortCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D47BCC071C60DB7500B4C057 /* ICProfilePortCell.m */; };
 		D484F90F1C60E87500837BD0 /* ICMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D484F90E1C60E87500837BD0 /* ICMessageViewController.m */; };
+		D4AF92AB1C69AD0000865295 /* ICAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AF92AA1C69AD0000865295 /* ICAboutViewController.m */; };
+		D4AF92B11C69BA3E00865295 /* ICMCVolumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AF92B01C69BA3E00865295 /* ICMCVolumeViewController.m */; };
+		D4AF92B41C69BA7E00865295 /* ICMCVolumeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AF92B31C69BA7E00865295 /* ICMCVolumeView.m */; };
 		D4B28E7E1C5DD96A00259F89 /* ICTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28E7D1C5DD96A00259F89 /* ICTableViewCell.m */; };
 		D4B28E941C5DDDF600259F89 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28E821C5DDDF600259F89 /* UIBarButtonItem+Extension.m */; };
 		D4B28E951C5DDDF600259F89 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B28E851C5DDDF600259F89 /* UIButton+Extension.m */; };
@@ -79,10 +93,29 @@
 		D41A537F1C63D19B00F41533 /* HelpList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HelpList.plist; sourceTree = "<group>"; };
 		D41A53821C63D68300F41533 /* ICGroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGroupTableViewController.h; sourceTree = "<group>"; };
 		D41A53831C63D68300F41533 /* ICGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGroupTableViewController.m; sourceTree = "<group>"; };
+		D41D89361C687478008F3AFD /* ICAddressCalulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICAddressCalulator.h; sourceTree = "<group>"; };
+		D41D89371C687478008F3AFD /* ICAddressCalulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICAddressCalulator.m; sourceTree = "<group>"; };
+		D41D893B1C687760008F3AFD /* ICMCMouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMCMouseViewController.h; sourceTree = "<group>"; };
+		D41D893C1C687760008F3AFD /* ICMCMouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMCMouseViewController.m; sourceTree = "<group>"; };
+		D41D89411C6879AF008F3AFD /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		D41D89451C687A11008F3AFD /* ICHTMLBrowerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICHTMLBrowerViewController.h; sourceTree = "<group>"; };
+		D41D89461C687A11008F3AFD /* ICHTMLBrowerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICHTMLBrowerViewController.m; sourceTree = "<group>"; };
+		D41D89481C687D57008F3AFD /* DeviceItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DeviceItems.plist; sourceTree = "<group>"; };
 		D42E3F621C5E28BF00DBA224 /* ICNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICNavigationController.h; sourceTree = "<group>"; };
 		D42E3F631C5E28BF00DBA224 /* ICNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICNavigationController.m; sourceTree = "<group>"; };
 		D42E3F651C5E600B00DBA224 /* ICGroupTableViewTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGroupTableViewTools.h; sourceTree = "<group>"; };
 		D42E3F661C5E600B00DBA224 /* ICGroupTableViewTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGroupTableViewTools.m; sourceTree = "<group>"; };
+		D44AA1BF1C6729D900B66563 /* ICSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSwitch.h; sourceTree = "<group>"; };
+		D44AA1C01C6729D900B66563 /* ICSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSwitch.m; sourceTree = "<group>"; };
+		D44AA1C21C672D8C00B66563 /* ICMainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMainItem.h; sourceTree = "<group>"; };
+		D44AA1C31C672D8C00B66563 /* ICMainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMainItem.m; sourceTree = "<group>"; };
+		D44AA1C51C672DC700B66563 /* MainItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MainItems.plist; sourceTree = "<group>"; };
+		D44AA1CE1C67314200B66563 /* ICMainControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMainControlViewController.h; sourceTree = "<group>"; };
+		D44AA1CF1C67314200B66563 /* ICMainControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMainControlViewController.m; sourceTree = "<group>"; };
+		D44AA1D11C67317500B66563 /* ICControlButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICControlButton.h; sourceTree = "<group>"; };
+		D44AA1D21C67317500B66563 /* ICControlButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICControlButton.m; sourceTree = "<group>"; };
+		D44AA1D41C6734BC00B66563 /* ICMCScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMCScreenViewController.h; sourceTree = "<group>"; };
+		D44AA1D51C6734BC00B66563 /* ICMCScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMCScreenViewController.m; sourceTree = "<group>"; };
 		D46465A51C63DD8500E5A268 /* ICServiceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICServiceItem.h; sourceTree = "<group>"; };
 		D46465A61C63DD8500E5A268 /* ICServiceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICServiceItem.m; sourceTree = "<group>"; };
 		D46465A81C63DDDC00E5A268 /* ServiceList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ServiceList.plist; sourceTree = "<group>"; };
@@ -98,6 +131,12 @@
 		D47BCC071C60DB7500B4C057 /* ICProfilePortCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICProfilePortCell.m; sourceTree = "<group>"; };
 		D484F90D1C60E87500837BD0 /* ICMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMessageViewController.h; sourceTree = "<group>"; };
 		D484F90E1C60E87500837BD0 /* ICMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMessageViewController.m; sourceTree = "<group>"; };
+		D4AF92A91C69AD0000865295 /* ICAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICAboutViewController.h; sourceTree = "<group>"; };
+		D4AF92AA1C69AD0000865295 /* ICAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICAboutViewController.m; sourceTree = "<group>"; };
+		D4AF92AF1C69BA3E00865295 /* ICMCVolumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMCVolumeViewController.h; sourceTree = "<group>"; };
+		D4AF92B01C69BA3E00865295 /* ICMCVolumeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMCVolumeViewController.m; sourceTree = "<group>"; };
+		D4AF92B21C69BA7E00865295 /* ICMCVolumeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMCVolumeView.h; sourceTree = "<group>"; };
+		D4AF92B31C69BA7E00865295 /* ICMCVolumeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMCVolumeView.m; sourceTree = "<group>"; };
 		D4B28E7C1C5DD96A00259F89 /* ICTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICTableViewCell.h; sourceTree = "<group>"; };
 		D4B28E7D1C5DD96A00259F89 /* ICTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICTableViewCell.m; sourceTree = "<group>"; };
 		D4B28E811C5DDDF600259F89 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
@@ -230,9 +269,68 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		D41D89391C687747008F3AFD /* MainMouse */ = {
+			isa = PBXGroup;
+			children = (
+				D41D893A1C687747008F3AFD /* Controller */,
+			);
+			path = MainMouse;
+			sourceTree = "<group>";
+		};
+		D41D893A1C687747008F3AFD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D41D893B1C687760008F3AFD /* ICMCMouseViewController.h */,
+				D41D893C1C687760008F3AFD /* ICMCMouseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D41D893E1C6879AF008F3AFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D41D893F1C6879AF008F3AFD /* HelpCenter */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D41D893F1C6879AF008F3AFD /* HelpCenter */ = {
+			isa = PBXGroup;
+			children = (
+				D41D89401C6879AF008F3AFD /* HTML */,
+			);
+			path = HelpCenter;
+			sourceTree = "<group>";
+		};
+		D41D89401C6879AF008F3AFD /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				D41D89411C6879AF008F3AFD /* index.html */,
+			);
+			path = HTML;
+			sourceTree = "<group>";
+		};
+		D41D89431C6879F6008F3AFD /* HTMLBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				D41D89441C6879F6008F3AFD /* Controller */,
+			);
+			path = HTMLBrowser;
+			sourceTree = "<group>";
+		};
+		D41D89441C6879F6008F3AFD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D41D89451C687A11008F3AFD /* ICHTMLBrowerViewController.h */,
+				D41D89461C687A11008F3AFD /* ICHTMLBrowerViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		D42E3F601C5E28AD00DBA224 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D44AA1CD1C67312700B66563 /* MainControl */,
 				D42E3F611C5E28AD00DBA224 /* Navigation */,
 				D41A53811C63D67100F41533 /* TableView */,
 			);
@@ -246,6 +344,34 @@
 				D42E3F631C5E28BF00DBA224 /* ICNavigationController.m */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		D44AA1C71C6730E500B66563 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D44AA1C81C6730E500B66563 /* Controller */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		D44AA1C81C6730E500B66563 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D44AA1D41C6734BC00B66563 /* ICMCScreenViewController.h */,
+				D44AA1D51C6734BC00B66563 /* ICMCScreenViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D44AA1CD1C67312700B66563 /* MainControl */ = {
+			isa = PBXGroup;
+			children = (
+				D44AA1CE1C67314200B66563 /* ICMainControlViewController.h */,
+				D44AA1CF1C67314200B66563 /* ICMainControlViewController.m */,
+				D44AA1D11C67317500B66563 /* ICControlButton.h */,
+				D44AA1D21C67317500B66563 /* ICControlButton.m */,
+			);
+			path = MainControl;
 			sourceTree = "<group>";
 		};
 		D47BCBF51C60D87A00B4C057 /* SettingService */ = {
@@ -283,6 +409,8 @@
 			children = (
 				D47BCC041C60DA9F00B4C057 /* ICPortCalculator.h */,
 				D47BCC051C60DA9F00B4C057 /* ICPortCalculator.m */,
+				D41D89361C687478008F3AFD /* ICAddressCalulator.h */,
+				D41D89371C687478008F3AFD /* ICAddressCalulator.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -341,6 +469,50 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D4AF92A71C69ACF100865295 /* SettingAbout */ = {
+			isa = PBXGroup;
+			children = (
+				D4AF92A81C69ACF100865295 /* Controller */,
+			);
+			path = SettingAbout;
+			sourceTree = "<group>";
+		};
+		D4AF92A81C69ACF100865295 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D4AF92A91C69AD0000865295 /* ICAboutViewController.h */,
+				D4AF92AA1C69AD0000865295 /* ICAboutViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D4AF92AC1C69BA1B00865295 /* MainVolume */ = {
+			isa = PBXGroup;
+			children = (
+				D4AF92AD1C69BA1B00865295 /* Controller */,
+				D4AF92AE1C69BA1B00865295 /* View */,
+			);
+			path = MainVolume;
+			sourceTree = "<group>";
+		};
+		D4AF92AD1C69BA1B00865295 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D4AF92AF1C69BA3E00865295 /* ICMCVolumeViewController.h */,
+				D4AF92B01C69BA3E00865295 /* ICMCVolumeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D4AF92AE1C69BA1B00865295 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4AF92B21C69BA7E00865295 /* ICMCVolumeView.h */,
+				D4AF92B31C69BA7E00865295 /* ICMCVolumeView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D4B28E7B1C5DD96000259F89 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +520,8 @@
 				D4B28E7D1C5DD96A00259F89 /* ICTableViewCell.m */,
 				D4CB2E3B1C6080E600311399 /* ICSegmentedControl.h */,
 				D4CB2E3C1C6080E600311399 /* ICSegmentedControl.m */,
+				D44AA1BF1C6729D900B66563 /* ICSwitch.h */,
+				D44AA1C01C6729D900B66563 /* ICSwitch.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -471,6 +645,7 @@
 		D4BF93401C5CB741005D06AA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D41D893E1C6879AF008F3AFD /* Resources */,
 				D4BF934C1C5CB741005D06AA /* Assets.xcassets */,
 				D4BF93511C5CB741005D06AA /* Info.plist */,
 				D4BF93411C5CB741005D06AA /* main.m */,
@@ -490,9 +665,14 @@
 				D4BF93651C5CB99D005D06AA /* TabBarDevice */,
 				D4BF93601C5CB99D005D06AA /* TabBarBattery */,
 				D4BF936F1C5CB99D005D06AA /* TabBarProfile */,
+				D44AA1C71C6730E500B66563 /* MainScreen */,
+				D41D89391C687747008F3AFD /* MainMouse */,
+				D4AF92AC1C69BA1B00865295 /* MainVolume */,
 				D47BCBF51C60D87A00B4C057 /* SettingService */,
 				D47BCC091C60E85200B4C057 /* SettingMessage */,
 				D41A53711C63D06500F41533 /* SettingHelper */,
+				D4AF92A71C69ACF100865295 /* SettingAbout */,
+				D41D89431C6879F6008F3AFD /* HTMLBrowser */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -624,6 +804,7 @@
 				D41A53671C63C60800F41533 /* ICDeviceItem.m */,
 				D41A53691C63C79E00F41533 /* ICDeviceGroup.h */,
 				D41A536A1C63C79E00F41533 /* ICDeviceGroup.m */,
+				D41D89481C687D57008F3AFD /* DeviceItems.plist */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -665,6 +846,9 @@
 		D4BF936C1C5CB99D005D06AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D44AA1C21C672D8C00B66563 /* ICMainItem.h */,
+				D44AA1C31C672D8C00B66563 /* ICMainItem.m */,
+				D44AA1C51C672DC700B66563 /* MainItems.plist */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -839,9 +1023,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D44AA1C61C672DC700B66563 /* MainItems.plist in Resources */,
 				D4B28EB91C5E0E8E00259F89 /* pcr.plist in Resources */,
 				D41A53701C63C95C00F41533 /* Profile.plist in Resources */,
+				D41D89421C6879AF008F3AFD /* index.html in Resources */,
 				D46465A91C63DDDC00E5A268 /* ServiceList.plist in Resources */,
+				D41D89491C687D57008F3AFD /* DeviceItems.plist in Resources */,
 				D4B28E991C5DDDF600259F89 /* UINavigationBar.bundle in Resources */,
 				D41A53801C63D19B00F41533 /* HelpList.plist in Resources */,
 				D4BF934D1C5CB741005D06AA /* Assets.xcassets in Resources */,
@@ -906,6 +1093,8 @@
 			files = (
 				D4B28EB81C5E0E8E00259F89 /* MUBottomPopView.m in Sources */,
 				D47BCC021C60DA7400B4C057 /* ICProfileTimeoutCell.m in Sources */,
+				D4AF92B41C69BA7E00865295 /* ICMCVolumeView.m in Sources */,
+				D4AF92B11C69BA3E00865295 /* ICMCVolumeViewController.m in Sources */,
 				D4B28E9A1C5DDDF600259F89 /* UIView+Extension.m in Sources */,
 				D4BF93881C5CBF13005D06AA /* ICBatteryViewController.m in Sources */,
 				D4CB2E3D1C6080E600311399 /* ICSegmentedControl.m in Sources */,
@@ -921,22 +1110,31 @@
 				D41A537B1C63D0B400F41533 /* ICHelpListItem.m in Sources */,
 				D41A53841C63D68300F41533 /* ICGroupTableViewController.m in Sources */,
 				D4CB2E401C60836400311399 /* ICTabBar.m in Sources */,
+				D44AA1D61C6734BC00B66563 /* ICMCScreenViewController.m in Sources */,
 				D4BF93851C5CBE9A005D06AA /* ICDeviceViewController.m in Sources */,
+				D44AA1C11C6729D900B66563 /* ICSwitch.m in Sources */,
 				D4B28E941C5DDDF600259F89 /* UIBarButtonItem+Extension.m in Sources */,
 				D484F90F1C60E87500837BD0 /* ICMessageViewController.m in Sources */,
 				D4BF938B1C5CBF91005D06AA /* ICProfileViewController.m in Sources */,
+				D41D893D1C687760008F3AFD /* ICMCMouseViewController.m in Sources */,
 				D4B28E981C5DDDF600259F89 /* UINavigationBar+Extension.m in Sources */,
 				D46465A71C63DD8500E5A268 /* ICServiceItem.m in Sources */,
 				D4B28E961C5DDDF600259F89 /* UIColor+Extension.m in Sources */,
 				D4B28EBC1C5E0EBA00259F89 /* ICUserDefaults.m in Sources */,
+				D4AF92AB1C69AD0000865295 /* ICAboutViewController.m in Sources */,
 				D4B28E971C5DDDF600259F89 /* UIImage+Extension.m in Sources */,
 				D4B28E951C5DDDF600259F89 /* UIButton+Extension.m in Sources */,
+				D44AA1D01C67314200B66563 /* ICMainControlViewController.m in Sources */,
+				D44AA1D31C67317500B66563 /* ICControlButton.m in Sources */,
 				D42E3F671C5E600B00DBA224 /* ICGroupTableViewTools.m in Sources */,
 				D4BF937F1C5CBD0C005D06AA /* ICTabBarViewController.m in Sources */,
 				D41A53651C63C23600F41533 /* ICBatteryStatus.m in Sources */,
+				D41D89381C687478008F3AFD /* ICAddressCalulator.m in Sources */,
 				D47BCC081C60DB7500B4C057 /* ICProfilePortCell.m in Sources */,
 				D47BCC031C60DA7400B4C057 /* ICProfileAddressCell.m in Sources */,
+				D44AA1C41C672D8C00B66563 /* ICMainItem.m in Sources */,
 				D41A536B1C63C79E00F41533 /* ICDeviceGroup.m in Sources */,
+				D41D89471C687A11008F3AFD /* ICHTMLBrowerViewController.m in Sources */,
 				D4B28EB61C5E0E8E00259F89 /* MUBottomPopNumberPickerView.m in Sources */,
 				D4B28EB71C5E0E8E00259F89 /* MUBottomPopPickerView.m in Sources */,
 				D4B28E7E1C5DD96A00259F89 /* ICTableViewCell.m in Sources */,

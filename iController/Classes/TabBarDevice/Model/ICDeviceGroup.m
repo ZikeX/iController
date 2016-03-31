@@ -10,4 +10,11 @@
 
 @implementation ICDeviceGroup
 
++ (NSDictionary *)mj_objectClassInArray {
+	return @{
+			 @"linking":[ICDeviceItem class],
+			 @"saved":[ICDeviceItem class]
+			 };
+}
+
 @end

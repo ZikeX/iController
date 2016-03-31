@@ -8,7 +8,10 @@
 
 #import "ICServiceViewController.h"
 #import "MUBottomPopNumberPickerView.h"
+
+#import "ICAddressCalulator.h"
 #import "ICPortCalculator.h"
+
 #import "ICGroupTableViewTools.h"
 #import "ICServiceItem.h"
 
@@ -99,26 +102,15 @@
 #pragma mark - Table view cell response
 
 - (void)responseForAddress {
-	NSArray<NSString *> *ip = [ICUserDefaults.address componentsSeparatedByString:@"."];
-	if (ip.count != 4) {
-		ip = nil;
-	}
-	NSMutableArray<NSNumber *> *selectedIndex = [NSMutableArray array];
-	for (int i = 0; i < ip.count; i++) {
-		[selectedIndex addObject:@(ip[i].integerValue)];
-	}
+	NSArray<NSNumber *> *oldSelectedIndex = [ICAddressCalulator arrayFromAddress:ICUserDefaults.address];
 	[MUBottomPopNumberPickerView showWithMaxValues:IP_MaxValue
-									 selectedIndex:selectedIndex
+									 selectedIndex:oldSelectedIndex
 									animatedOption:MUBottomPopViewAnimatedOptionRebound
 									  certainBlock:^(BOOL ok,
 													 NSArray<NSNumber *> *maxValues,
 													 NSArray<NSNumber *> *selectedIndexes) {
 										  if (ok) {
-											  ICUserDefaults.address = [NSString stringWithFormat:@"%@.%@.%@.%@",
-																		selectedIndexes[0],
-																		selectedIndexes[1],
-																		selectedIndexes[2],
-																		selectedIndexes[3]];
+											  ICUserDefaults.address = [ICAddressCalulator addressFromArray:selectedIndexes];
 											  self.addressCell.address = ICUserDefaults.address;
 										  }
 									  }];

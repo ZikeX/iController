@@ -30,6 +30,4 @@ typedef NS_ENUM(NSUInteger, ICDeviceItemBrand) {
 /** 品牌 */
 @property (nonatomic, assign) ICDeviceItemBrand brand;
 
-@property (nonatomic, assign, getter=isApple) BOOL apple;
-
 @end
