@@ -5,20 +5,6 @@
       "scale" : "1x"
     },
     {
-      "resizing" : {
-        "mode" : "9-part",
-        "center" : {
-          "mode" : "tile",
-          "width" : 1,
-          "height" : 1
-        },
-        "cap-insets" : {
-          "bottom" : 72,
-          "top" : 71,
-          "right" : 72,
-          "left" : 71
-        }
-      },
       "idiom" : "universal",
       "filename" : "button_highlight@2x.png",
       "scale" : "2x"
